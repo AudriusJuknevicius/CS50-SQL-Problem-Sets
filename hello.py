@@ -1,4 +1,3 @@
 #hello
-name = input(What's your name? ")
-             print("hello, ") + print(name)
-             
+name = input("What's your name? ")
+print("hello, ") + print(name)
