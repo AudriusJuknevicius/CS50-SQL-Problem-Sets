@@ -1,2 +1,2 @@
-x, y = input("What's x? "), input("what's y? ")
-print(int(x) + int(y))
+x, y = int(input("What's x? ")), int(input("what's y? "))
+print((x) + (y))
