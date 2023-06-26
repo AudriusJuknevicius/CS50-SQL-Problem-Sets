@@ -1,5 +1,5 @@
 #Main function that converts text to emoticons automatically.
-def convert(face):
+def convert(this):
     str.replace(":)", "🙂",face)
     str.replace(":(", "🙁",face)
 
