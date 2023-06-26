@@ -3,4 +3,5 @@ def convert(this):
     print(this.replace(":)", "🙂").replace(":(", "🙁"))
 
 greeting = input("Say hello ")
+print(greeting)
 convert(greeting)
