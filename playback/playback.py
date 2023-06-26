@@ -1,4 +1,3 @@
 #Output the answer with periods for spaces, in turn slowing down the answer.
 course = input("What course is this? ")
-str.replace(" ", "...")
-print(course)
+print(course.replace(" ", "..."))
