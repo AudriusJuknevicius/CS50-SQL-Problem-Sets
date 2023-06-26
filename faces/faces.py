@@ -4,4 +4,5 @@ def convert():
     replace(":(", "🙁")
 greeting = input("Say hello ")
 
-print.convert((greeting))
+convert()
+print(greeting)
