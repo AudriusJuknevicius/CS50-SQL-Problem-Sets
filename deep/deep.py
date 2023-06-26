@@ -1,7 +1,6 @@
 #Using match to output answer to the great question of life depending on user input.
 def main():
-    answer = input(f"What is the Answer to the Great Question of Life, the Universe, and Everything? ")
-    answer.strip().lower()
+    answer = input(f"What is the Answer to the Great Question of Life, the Universe, and Everything? ".strip().lower())
     match answer:
         case "42" | "forty-two" | "fortytwo":
             print("Yes")
