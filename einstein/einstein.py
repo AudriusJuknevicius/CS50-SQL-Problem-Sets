@@ -1,6 +1,7 @@
-def main(e):
-    e = input(int("M: ")
-    e ** e
+def main():
+    input(int("M: ")
+    M ** M
+    
 
 
 
