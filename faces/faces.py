@@ -6,4 +6,4 @@ def convert(this):
     print(greeting)
 
 greeting = input("Say hello ")
-convert(greeting)
+convert(greeting=this )
