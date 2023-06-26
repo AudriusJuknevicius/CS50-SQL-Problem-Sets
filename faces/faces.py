@@ -5,6 +5,5 @@ def convert(this):
     this = str.replace(":(", "🙁")
     print(greeting)
 
-convert()
 greeting = input("Say hello ")
-
+convert(greeting)
