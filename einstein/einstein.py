@@ -1,7 +1,7 @@
-def main(M):
-    M = input(int("M: "))
-    M ** M
-    return M
+def main():
+    E = input(int("M: "))
+    E ** E
+    print(int("E: "))
 
 main()
 
