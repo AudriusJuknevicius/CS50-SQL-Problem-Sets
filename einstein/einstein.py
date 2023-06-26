@@ -1,7 +1,8 @@
 def main():
-    M = input("M: ")
-    C = 300000000
-    E = int(pow(M,C))
+    M = int(input("M: "))
+    C = int(300000000)
+    MC = M + C
+    E = MC ** 2
     print("E: ",E)
 
 main()
