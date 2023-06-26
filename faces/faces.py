@@ -1,3 +1,5 @@
 #Main function that converts text to emoticons automatically.
 greeting = input("Say hello ")
-print(greeting).con
+convert = replace(":)","🙂"), replace
+
+print(greeting.replace(":)","🙂",":(","🙁"))
