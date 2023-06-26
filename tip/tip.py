@@ -6,13 +6,13 @@ def main():
 
 
 def dollars_to_float(d):
-    return float(d.format(12.3)).remove("$")
+    
 
 
 
 
 def percent_to_float(p):
-    return float(p.format(0.00)).remove("%")
+    return .remove("%", p)
 
 
 
