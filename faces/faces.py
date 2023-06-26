@@ -4,7 +4,6 @@ def convert(this):
 
 def main():
     greeting = input("Say hello ")
-    convert(greeting)
     print(convert(greeting))
 
 main()
