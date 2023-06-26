@@ -5,5 +5,5 @@ def convert(face):
 
 greeting = input("Say hello ")
 
-convert()
+convert(face)
 print(greeting)
