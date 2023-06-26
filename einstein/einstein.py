@@ -1,6 +1,7 @@
-def main():
-    input(int("M: ")
-    
+def main(e):
+    e = input(int("M: ")
+    e 
+
 
 
 
