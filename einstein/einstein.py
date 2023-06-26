@@ -1,7 +1,7 @@
 def main():
-    E = input("M: ")
-    E = int
-    E = E ** E
+    M = input("M: ")
+    C = 300000000
+    E = int(M) * int(C)
     print(int("E: "))
 
 main()
