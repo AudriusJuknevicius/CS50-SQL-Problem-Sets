@@ -1,4 +1,4 @@
 def main()
     greeting = input("Greeting: )
-    match greeting.lower()
-        case "Hello" | "
+    greeting.lower()
+    if greeting.startswith("hello")
