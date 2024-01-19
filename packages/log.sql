@@ -100,3 +100,10 @@
 
 -- *** The Devious Delivery ***
 
+SELECT
+    *
+FROM
+    "packages"
+WHERE
+    "from_address_ID" is NULL
+    ;
