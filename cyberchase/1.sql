@@ -2,3 +2,5 @@
 
 select *
 from "Episodes"
+where "season" = 1
+;
