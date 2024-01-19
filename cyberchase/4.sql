@@ -1,10 +1,10 @@
 --write a query to find the titles of episodes that do not yet have a listed topic.
 
-SELECT
+    SELECT
     id,
     title
-FROM
+    FROM
     "episodes"
-Where
+    Where
     "topic" = "NULL"
     ;
