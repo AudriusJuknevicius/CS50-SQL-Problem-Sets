@@ -4,14 +4,16 @@
 --     count("air_date")
 -- FROM "episodes"
 -- where
--- "air_date" between "2018-01-01" and "2023-12-31"
--- ;
+-- "air_date" like "2018%" or "air_date" like "2019%" or "air_date" like "2020%" or "air_date" like "2021%" or "air_date" like "2022%" or "air_date" like "2023%"
+
 
 
 SELECT
     count("air_date")
 FROM "episodes"
 where
-"air_date" like "2018%" and "air_date" like "2019%" and "air_date" like "2020%" and "air_date" like "2021%" and "air_date" like "2022%" and "air_date" like "2023%"
+"air_date" between "2018-01-01" and "2023-12-31"
 ;
+
+
 
