@@ -22,13 +22,21 @@
 
 -- .schema
 
+-- SELECT
+--     *
+--     FROM
+--     "addresses"
+--     NATURAL JOIN "scans"
+--     Where
+--     "address" like "2 Finn____ Street"
+--     ;
+
+-- Found that the address type was residential.
 SELECT
     *
     FROM
-    "addresses"
+    "packages"
     NATURAL JOIN "scans"
     Where
-    "address" like "2 Finn____ Street"
+    "id" = 854
     ;
-
--- Found that the address type was residential.
