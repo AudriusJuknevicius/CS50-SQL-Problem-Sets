@@ -110,10 +110,18 @@
 
 -- ID - 5090, contents "Duck debugger, from_address_id is NULL, to_address_id is 50.
 
+-- SELECT
+--     *
+-- FROM
+--     "scans"
+-- WHERE
+--     "package_ID" = 5098
+--     ;
+
 SELECT
     *
 FROM
-    "scans"
+    "addresses"
 WHERE
-    "package_ID" = 5098
+    "ID" = 348 and "ID" = 50
     ;
