@@ -38,4 +38,4 @@ SELECT
     "addresses" a,
     "packages" p,
     "scans" s
-    WHERE
+    JOIN "addresses" on 
