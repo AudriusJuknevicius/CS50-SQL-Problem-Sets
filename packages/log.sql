@@ -131,5 +131,5 @@
 FROM
     "scans"
 WHERE
-    "package_id" = 348
+    "id" = 348
     ;
