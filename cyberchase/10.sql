@@ -6,5 +6,5 @@ SELECT
     FROM
     "episodes"
     ORDER BY
-    "production_code" DESC
+    "production_code" ASC
     ;
