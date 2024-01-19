@@ -44,7 +44,7 @@ SELECT
     *
     FROM
     "addresses"
-    Join "packages" on "from_address_id" REFERENCES "adresses" ("id")
+    Natural Join "packages"
     WHERE
     "from_address_id" = "432"
     ;
