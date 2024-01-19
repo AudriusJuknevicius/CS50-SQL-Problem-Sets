@@ -23,19 +23,12 @@
 -- .schema
 
 SELECT
-    a.id,
-    p.id,
-    d.id,
-    s.id,
-    p.contents,
-    p.from_address_id,
-    s.package_id,
-    s.action,
-    s.timestamp
-
-
+    *
     FROM
-    "addresses" a,
-    "packages" p,
-    "scans" s
-    NATURAL JOIN "addresses" on
+    "addresses"
+    NATURAL JOIN "scans"
+    Where
+    "address" like "2 Finn____ Street"
+    ;
+
+-- Found that the address type was residential.
