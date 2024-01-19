@@ -43,8 +43,7 @@
 SELECT
     *
     FROM
-    "packages"
-    NATURAL JOIN "scans"
-    Where
-    "address" = "900 Somerville Avenue"
+    "addresses"
+    WHERE
+    "address" = "2 Finnigan"
     ;
