@@ -100,10 +100,20 @@
 
 -- *** The Devious Delivery ***
 
+-- SELECT
+--     *
+-- FROM
+--     "packages"
+-- WHERE
+--     "from_address_ID" is NULL
+--     ;
+
+-- ID - 5090, contents "Duck debugger, from_address_id is NULL, to_address_id is 50.
+
 SELECT
     *
 FROM
-    "packages"
+    "scans"
 WHERE
-    "from_address_ID" is NULL
+    "package_ID" = 5098
     ;
