@@ -6,5 +6,5 @@
     FROM
     "episodes"
     Where
-    "topic" = ""
+    "topic" is NULL
     ;
