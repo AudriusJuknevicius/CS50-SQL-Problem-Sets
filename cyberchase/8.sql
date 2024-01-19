@@ -12,6 +12,6 @@ SELECT
     count("air_date")
 FROM "episodes"
 where
-"air_date" like "2018%" and "2019%" and "2020%" and "2021%" and "2022%" and "2023%"
+"air_date" like "2018%" and "air_date" like "2019%" and "air_date" like "2020%" and "air_date" like "2021%" and "air_date" like "2022%" and "air_date" like "2023%"
 ;
 
