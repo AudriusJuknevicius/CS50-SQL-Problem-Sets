@@ -48,12 +48,19 @@
 --     WHERE
 --     "from_address_id" = "432"
 --     ;
+-- SELECT
+--     *
+--     FROM
+--     "packages"
+--     Natural Join "scans"
+
+--     WHERE
+--     "from_address_id" = "432" and "contents" = "Congratulatory letter"
+--     ;
 SELECT
     *
-    FROM
-    "packages"
-    Natural Join "scans"
-
-    WHERE
-    "from_address_id" = "432" and "contents" = "Congratulatory letter"
-    ;
+FROM
+    "addresses"
+WHERE
+"id" = "4792"
+;
