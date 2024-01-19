@@ -40,11 +40,18 @@
 --     Where
 --     "id" = 854
 --     ;
+-- SELECT
+--     *
+--     FROM
+--     "addresses"
+--     Natural Join "packages"
+--     WHERE
+--     "from_address_id" = "432"
+--     ;
 SELECT
     *
     FROM
     "addresses"
-    Natural Join "packages"
     WHERE
-    "from_address_id" = "432"
+    "id" = "854"
     ;
