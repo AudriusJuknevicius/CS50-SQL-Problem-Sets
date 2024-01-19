@@ -38,4 +38,4 @@ SELECT
     "addresses" a,
     "packages" p,
     "scans" s
-    JOIN "addresses" on 
+    NATURAL JOIN "addresses" on
