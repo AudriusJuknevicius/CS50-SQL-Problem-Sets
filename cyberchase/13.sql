@@ -4,5 +4,9 @@
 --Question: Titles and topics
 
 SELECT
-    title,
-    
+    title
+FROM "episodes"
+WHERE
+    "air_date" like "____-12-__"
+    ;
+
