@@ -69,6 +69,6 @@ SELECT
 FROM
     "scans"
 WHERE
-    "driver_id" = 5 and "package_id" = 4280
+    "package_id" = 4280
     ;
-    
+
