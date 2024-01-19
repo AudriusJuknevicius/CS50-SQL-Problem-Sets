@@ -143,6 +143,16 @@
 
 -- 7 Humboldt Place / Police Station
 
-Recipient Address: 728 Maple Place
-Sent Time: Two weeks ago
+-- *** The Forgotten Gift ***
 
+-- Recipient Address: 728 Maple Place
+-- Sent Time: Two weeks ago
+-- Sender Address: 109 Tileston Street
+
+SELECT
+    *
+FROM
+    "packages"
+WHERE
+"to_address_id" like "728%"
+;
