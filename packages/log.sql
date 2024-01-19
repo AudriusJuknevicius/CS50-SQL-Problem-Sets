@@ -7,6 +7,7 @@
 
 
 -- *** The Lost Letter ***
+
 -- First Name: Anneke
 -- Address: 900 Somerville Avenue
 -- Sent: Not long ago
@@ -16,3 +17,7 @@
 
 -- Task: Check if the letter has arrived at the destination
 
+-- At what type of address did the Lost Letter end up?:
+-- At what address did the Lost Letter end up?:
+
+.schema
