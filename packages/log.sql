@@ -79,18 +79,20 @@
 --     "ID" = 7081
 --     ;
 
--- Address is 52 Mt Washington Avenue and the type is Residential.
+-- Address is 52 Mt Washington Avenue and the type is Residential.  This turned out to be wrong - I went back.
 
 -- SELECT
 --     *
 -- FROM "packages"
 -- WHERE
--- "id" = 384
+-- "id" = 384 (the package ID)
 -- ;
 
-SELECT
-    *
-FROM "scans"
-WHERE
-"package_id" = 384
-;
+-- SELECT
+--     *
+-- FROM "scans"
+-- WHERE
+-- "package_id" = 384
+-- ;
+
+-- delivery address_ID = 854, "2 Finnigan Street".
