@@ -123,5 +123,5 @@ SELECT
 FROM
     "addresses"
 WHERE
-    "ID" = 348 and "ID" = 50
+    "id" = 348 and "id" = 50
     ;
