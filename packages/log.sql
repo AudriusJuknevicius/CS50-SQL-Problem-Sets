@@ -25,11 +25,17 @@
 SELECT
     a.id,
     p.id,
+    d.id,
+    s.id,
     p.contents,
     p.from_address_id,
+    s.package_id,
+    s.action,
+    s.timestamp
 
 
     FROM
-    "addresses" a
-    "packages" p
+    "addresses" a,
+    "packages" p,
     "scans" s
+    WHERE
