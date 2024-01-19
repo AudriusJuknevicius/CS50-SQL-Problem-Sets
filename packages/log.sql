@@ -118,10 +118,18 @@
 --     "package_ID" = 5098
 --     ;
 
-SELECT
+-- SELECT
+--     *
+-- FROM
+--     "addresses"
+-- WHERE
+--     "id" = 348
+--     ;
+
+    SELECT
     *
 FROM
-    "addresses"
+    "scans"
 WHERE
-    "id" = 348
+    "" = 348
     ;
