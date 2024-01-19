@@ -32,6 +32,14 @@
 --     ;
 
 -- Found that the address type was residential.
+-- SELECT
+--     *
+--     FROM
+--     "packages"
+--     NATURAL JOIN "scans"
+--     Where
+--     "id" = 854
+--     ;
 SELECT
     *
     FROM
