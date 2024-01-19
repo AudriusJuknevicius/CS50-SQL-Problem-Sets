@@ -4,5 +4,5 @@ SELECT
 FROM
     "episodes"
 WHERE
-"season" = 6 and "air_date" = "2007%"
+"season" = 6 and "air_date" is not "2008%"
 ;
