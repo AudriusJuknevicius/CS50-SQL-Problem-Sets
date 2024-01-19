@@ -157,12 +157,30 @@
 -- "address" like "728%"
 -- ;
 
-ID4983 - 728 Maple Place - Residential
+-- SELECT
+--     *
+-- FROM
+--     "addresses"
+-- WHERE
+-- "address" like "109 Tileston"
+-- ;
+
+-- ID 4983 - 728 Maple Place - Residential
+-- ID 9873 - 109 Tileston Street - Residential
+
+-- SELECT
+--     *
+-- FROM
+--     "packages"
+-- WHERE
+-- "from_address_id" = 9873
+-- ;
+-- Contents - Flowers, Package ID - 9523
 
 SELECT
     *
 FROM
-    "packages"
+"scans"
 WHERE
-"to_address_id" = 4983
-;
+    "package_id" = 9523
+    ;
