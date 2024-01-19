@@ -64,11 +64,17 @@
 -- WHERE
 -- "id" = "4792"
 -- ;
+-- SELECT
+--     *
+-- FROM
+--     "scans"
+-- WHERE
+--     "package_id" = 4280
+--     ;
 SELECT
     *
 FROM
-    "scans"
+    "addresses"
 WHERE
-    "package_id" = 4280
+    "ID" = 7081
     ;
-
