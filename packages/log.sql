@@ -57,10 +57,18 @@
 --     WHERE
 --     "from_address_id" = "432" and "contents" = "Congratulatory letter"
 --     ;
+-- SELECT
+--     *
+-- FROM
+--     "addresses"
+-- WHERE
+-- "id" = "4792"
+-- ;
 SELECT
     *
 FROM
-    "addresses"
+    "scans"
 WHERE
-"id" = "4792"
-;
+    "driver_id" = 5 and "package_id" = 4280
+    ;
+    
