@@ -71,10 +71,12 @@
 -- WHERE
 --     "package_id" = 4280
 --     ;
-SELECT
-    *
-FROM
-    "addresses"
-WHERE
-    "ID" = 7081
-    ;
+-- SELECT
+--     *
+-- FROM
+--     "addresses"
+-- WHERE
+--     "ID" = 7081
+--     ;
+
+-- Address is 52 Mt Washington Avenue and the type is Residential.
