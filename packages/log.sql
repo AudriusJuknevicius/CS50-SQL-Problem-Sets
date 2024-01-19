@@ -23,4 +23,13 @@
 -- .schema
 
 SELECT
-    
+    a.id,
+    p.id,
+    p.contents,
+    p.from_address_id,
+
+
+    FROM
+    "addresses" a
+    "packages" p
+    "scans" s
