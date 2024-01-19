@@ -177,10 +177,20 @@
 -- ;
 -- Contents - Flowers, Package ID - 9523
 
-SELECT
-    *
-FROM
-"scans"
-WHERE
-    "package_id" = 9523
-    ;
+-- SELECT
+--     *
+-- FROM
+-- "scans"
+-- WHERE
+--     "package_id" = 9523
+--     ;
+
+-- SELECT
+--     *
+-- FROM
+--     "drivers"
+-- WHERE
+--     "id" = 17
+--     ;
+
+-- Driver "Mikel" has the parcel currently.
