@@ -3,6 +3,6 @@ SELECT
     count("air_date")
 FROM "episodes"
 where
-"air_date" between like "2018%" and like "2023%"
+"air_date" between "2018-01-01" and "2023-12-31"
 ;
 
