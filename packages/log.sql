@@ -55,5 +55,5 @@ SELECT
     Natural Join "scans"
 
     WHERE
-    "id" = "384"
+    "from_address_id" = "432" and "contents" = "Congratulatory letter"
     ;
