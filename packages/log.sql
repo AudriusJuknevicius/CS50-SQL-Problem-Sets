@@ -149,10 +149,20 @@
 -- Sent Time: Two weeks ago
 -- Sender Address: 109 Tileston Street
 
+-- SELECT
+--     *
+-- FROM
+--     "addresses"
+-- WHERE
+-- "address" like "728%"
+-- ;
+
+ID4983 - 728 Maple Place - Residential
+
 SELECT
     *
 FROM
     "packages"
 WHERE
-"to_address_id" like "728%"
+"to_address_id" = 4983
 ;
