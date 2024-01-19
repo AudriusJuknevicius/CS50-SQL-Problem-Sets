@@ -133,11 +133,13 @@
 -- WHERE
 --     "package_id" = 5098
 --     ;
-   SELECT
-    *
-FROM
-    "scans"
-WHERE
-    "id" = 30140
-    ;
+--    SELECT
+--     *
+-- FROM
+--     "scans"
+-- WHERE
+--     "id" = 30140
+--     ;
+
+-- 7 Humboldt Place / Police Station
 
