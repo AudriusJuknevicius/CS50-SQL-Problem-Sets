@@ -3,5 +3,5 @@ SELECT
     count("air_date")
 FROM "episodes"
 where
-"air_date" between "2002-01-21" and "2023-12-31"
+"air_date" between "2002-01-21" and "2007-12-31"
 ;
