@@ -12,7 +12,7 @@
 -- Address: 900 Somerville Avenue
 -- Sent: Not long ago
 -- Recipient: Varsha
--- Recipient Address: 2 Finnegan Street, Uptown (potentially wrong?)
+-- Recipient Address: 2 Finnegan Street, Uptown (potentially wrong?) Supposed to be "2 Finnigan Street"
 -- Contents: Congratulatory note
 
 -- Task: Check if the letter has arrived at the destination
@@ -44,6 +44,7 @@ SELECT
     *
     FROM
     "addresses"
+    Join "packages" on "from_address_id" REFERENCES "adresses" ("id")
     WHERE
-    "address" = "2 Finnigan"
+    "from_address_id" = "432"
     ;
