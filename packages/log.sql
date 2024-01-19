@@ -51,7 +51,9 @@
 SELECT
     *
     FROM
-    "addresses"
+    "packages"
+    Natural Join "scans"
+    
     WHERE
     "id" = "854"
     ;
