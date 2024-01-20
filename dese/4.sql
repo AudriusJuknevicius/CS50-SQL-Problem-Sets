@@ -1,8 +1,7 @@
 SELECT
-    "city",
-    "name"
-    (SELECT
-    count(Distinct "city")
+    DISTINCT "city"
+(SELECT
+    count("name")
     FROM
     "schools"
     )
