@@ -1,6 +1,5 @@
 SELECT
-    d.name,
-    e.pupils
+    d.name
 FROM
 "districts" d
 INNER JOIN "expenditures" e on d.id = e.district_id
