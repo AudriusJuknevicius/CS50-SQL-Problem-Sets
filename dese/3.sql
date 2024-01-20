@@ -1,6 +1,5 @@
 SELECT
-    district_id,
-    pupils
+    SUM(AVG("per_pupil_expenditure")) as [Average District Per-Pupil Expenditure]
 FROM
     "expenditures"
     ;
