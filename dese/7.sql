@@ -1,5 +1,5 @@
 SELECT
-    d.name
+    s.name
 FROM
 "districts" d
 INNER JOIN "schools" s on d.id = s.district_id
