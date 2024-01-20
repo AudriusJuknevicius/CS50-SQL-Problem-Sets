@@ -15,7 +15,6 @@ count("name")
 FROM
 "schools"
 GROUP BY city
-ORDER BY ASC
 LIMIT 10
 ;
 
