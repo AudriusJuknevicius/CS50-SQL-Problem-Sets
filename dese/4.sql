@@ -16,7 +16,7 @@ FROM
 "schools"
 WHERE
     "type" = "Public School"
-GROUP BY city
+GROUP BY "Number of Schools"
 ORDER BY "Number of Schools", "city" DESC
 LIMIT 10
 ;
