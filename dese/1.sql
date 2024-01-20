@@ -1,6 +1,5 @@
 SELECT
-    "city",
-    "name"
+    state
 FROM
     "schools"
 WHERE
