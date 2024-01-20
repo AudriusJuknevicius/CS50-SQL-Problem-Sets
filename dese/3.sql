@@ -1,2 +1,7 @@
 SELECT
-    "per_pupil_expenditure" as [Average District Per-Pupil Expenditure]
+    district_id,
+    pupils
+FROM
+    "expenditures"
+    ;
+
