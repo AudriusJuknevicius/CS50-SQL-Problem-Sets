@@ -3,6 +3,6 @@ SELECT
 FROM
     "schools"
 WHERE
-    "state" = "MA" and "type" = "Public School" or "Charter School"
+    "state" = "MA" and "type" = "Public School" or "type" = "Charter School"
     ;
 
