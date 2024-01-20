@@ -1,6 +1,6 @@
 SELECT
     "city",
-    count("name") as [Number of Schools]
+    count("id") as [Number of Schools]
 FROM
 "schools"
 WHERE
