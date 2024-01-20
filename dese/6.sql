@@ -1,5 +1,5 @@
 SELECT
-    "name",
+    "name"
 FROM
 "schools"
-JOIN "graduation_rates" on "schools"."id"
+JOIN "graduation_rates" on "schools"."id"="id";
