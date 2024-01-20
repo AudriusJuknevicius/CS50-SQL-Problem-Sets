@@ -1,8 +1,8 @@
 SELECT
-    "name"
+    d."name"
 FROM
-"districts"
-JOIN "schools" on "id"."id" = "district_id"."id"
+"districts" d
+NATURAL JOIN "schools" s 
 WHERE
-"name" = "Cambridge"
+d."name" = "Cambridge"
 ;
