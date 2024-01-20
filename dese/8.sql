@@ -1,10 +1,11 @@
 SELECT Count(*)
 FROM(
 SELECT
-    s.name,
+    d.name,
     e.pupils
 FROM
-"schools" s
+"districts" d
+INNER JOIN "schools" s ON d.id. = s.district.id
 INNER JOIN "expenditures" e on s.district_id = e.district_id
 ORDER BY e.pupils DESC
 )
