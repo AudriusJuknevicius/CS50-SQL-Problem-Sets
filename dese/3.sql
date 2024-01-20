@@ -1,8 +1,8 @@
 SELECT
     pupils,
-    AVG("per_pupil_expenditure") as [Average District Per-Pupil Expenditure]
+    AVG("e.per_pupil_expenditure") as [Average District Per-Pupil Expenditure]
 FROM
-    "expenditures"
-JOIN "districts" on 
+    "districts" d
+JOIN "expenditures" e on "district_ID" = "districts"."id";
     ;
 
