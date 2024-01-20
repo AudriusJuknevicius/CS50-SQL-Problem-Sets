@@ -5,9 +5,9 @@ FROM
 "schools"
 WHERE
     "type" = "Public School"
+GROUP BY city
 HAVING
 "Number of Schools" <= 3
-GROUP BY city
 ORDER BY "Number of Schools" DESC, "city" ASC
 
 ;
