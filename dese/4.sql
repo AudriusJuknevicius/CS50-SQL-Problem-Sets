@@ -10,8 +10,7 @@
 
 SELECT
 "city",
-"name",
-count("district_id")
+count("name")
 
 FROM
 "schools"
