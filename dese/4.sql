@@ -1,12 +1,13 @@
 SELECT
-    city
-    (SELECT
+    "name",
+    "City"
+FROM
+    "schools"
+(SELECT
     count("name")
     FROM
     "schools"
     )
-FROM
-    "schools"
 LIMIT 10
 ;
 
