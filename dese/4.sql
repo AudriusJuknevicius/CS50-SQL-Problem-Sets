@@ -15,6 +15,7 @@ count("district_id")
 
 FROM
 "schools"
-LIMIT 50
+GROUP BY city
+LIMIT 10
 ;
 
