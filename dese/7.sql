@@ -1,7 +1,8 @@
 SELECT
     "name"
 FROM
-"schools"
-JOIN "graduation_rates" on "schools"."id"="graduation_rates"."id"
+"districts"
+JOIN "schools" on "id"."id" = "district_id"."id"
 WHERE
-"graduated" = 100
+"name" = "Cambridge"
+;
