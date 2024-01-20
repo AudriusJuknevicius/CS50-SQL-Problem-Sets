@@ -1,3 +1,7 @@
 SELECT
-    city
-    count(id)
+    city,
+    count("name")
+FROM
+    "schools"
+LIMIT 10
+    ;
