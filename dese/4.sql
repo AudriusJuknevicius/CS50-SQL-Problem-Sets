@@ -1,2 +1,3 @@
 SELECT
-    
+    city
+    count(id)
