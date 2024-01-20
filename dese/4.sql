@@ -10,11 +10,12 @@
 
 SELECT
 "city",
-count("name")
+count("name") as [Number of Schools]
 
 FROM
 "schools"
 GROUP BY city
+ORDER BY "Number of Schools" DESC
 LIMIT 10
 ;
 
