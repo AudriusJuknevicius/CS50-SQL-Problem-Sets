@@ -9,7 +9,10 @@
 -- ;
 
 SELECT
-*
+"city",
+"name",
+count("district_id")
+
 FROM
 "schools"
 LIMIT 50
