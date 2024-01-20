@@ -10,14 +10,14 @@
 
 SELECT
 "city",
-count("name") as [Number of Schools]
+count("name") as q
 
 FROM
 "schools"
 WHERE
     "type" = "Public School"
-GROUP BY 
-ORDER BY "Number of Schools", "city" DESC
+GROUP BY "city"
+ORDER BY COUNT("q"), "city" DESC
 LIMIT 10
 ;
 
