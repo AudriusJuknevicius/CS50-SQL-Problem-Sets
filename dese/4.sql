@@ -1,6 +1,6 @@
 SELECT
     DISTINCT city,
-    "name"
+    COUNT(MAX("name"))
 FROM
     "schools"
 LIMIT 10
