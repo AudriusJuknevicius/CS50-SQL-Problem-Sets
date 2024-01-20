@@ -7,10 +7,11 @@
 --     ;
 
 SELECT
-    "name",
     count(Distinct city)
 FROM
     "schools"
+WHERE
+    "
 LIMIT 10
 ;
 
