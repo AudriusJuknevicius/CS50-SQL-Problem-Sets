@@ -7,4 +7,6 @@ INNER JOIN
     "expenditures" e ON d.id = e.id
 WHERE
     d.type = "Public School"
+ORDER BY d.per_pupil_expenditure DESC
+LIMIT 20
     ;
