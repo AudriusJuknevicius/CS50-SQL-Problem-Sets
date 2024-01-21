@@ -6,7 +6,7 @@ FROM
 INNER JOIN
     "expenditures" as e ON d.id = e.district_id
 WHERE
-    "d"."type" = "Public School"
+    "d"."type" like "%Public%"
 ORDER BY "e"."per_pupil_expenditure" DESC
-LIMIT 20
+LIMIT 10
 ;
