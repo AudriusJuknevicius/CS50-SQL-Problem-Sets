@@ -1,8 +1,4 @@
 SELECT
-    COUNT(*)
-    FROM
-    (
-SELECT
     DISTINCT dis.name,
     exp.per_pupil_expenditure,
     sta.exemplary
@@ -28,11 +24,9 @@ WHERE
             "staff_evaluations"
     )
     ORDER BY sta.exemplary DESC, exp.per_pupil_expenditure DESC
-    )
     ;
 
 
 -- COLUMNS:
 
 -- PUBLIC SCHOOL DISTRICT / Above Average Per Pupil Expenditures / Above Average Percentage of Teachers rated exemplary
--- DISTRICT + SCHOOL + EXPENDITURE + GRADUATION RATES +
