@@ -1,9 +1,9 @@
 SELECT
-"city",
-count("name") as [Number of Schools]
+    "city",
+    count("name") as [Number of Schools]
 
 FROM
-"schools"
+    "schools"
 WHERE
     "type" = "Public School"
 GROUP BY city

@@ -5,4 +5,6 @@ FROM
     "districts" d
 INNER JOIN
     "expenditures" e ON d.id = e.id
+WHERE
+    d.type = "Public School"
     ;
