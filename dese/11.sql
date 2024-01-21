@@ -21,9 +21,7 @@
 -- LIMIT 50
 -- ;
 -- Time to face my fears of joins, actually started comprehending it properly below.
-SELECT
-    count(*)
-    FROM(
+
 SELECT
     sch.name,
     exp.per_pupil_expenditure,
@@ -35,5 +33,4 @@ INNER JOIN "expenditures" as exp ON dis.id = exp.district_id
 INNER JOIN "schools" as sch ON dis.id = sch.district_id
 INNER JOIN "graduation_rates" as gra ON sch.id = gra.school_id
 ORDER BY exp.per_pupil_expenditure DESC, sch.name ASC
-)
 ;
