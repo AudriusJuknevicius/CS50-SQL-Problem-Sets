@@ -1,4 +1,8 @@
 SELECT
+    count(*)
+    FROM
+    (
+SELECT
     dis.name,
     exp.per_pupil_expenditure,
     sta.exemplary
@@ -23,9 +27,9 @@ WHERE
         FROM
             "staff_evaluations"
     )
-    
-LIMIT 50
-;
+    ORDER BY sta.exemplary DESC, exp.per_pupil_expenditure DESC
+    )
+    ;
 
 
 -- COLUMNS:
