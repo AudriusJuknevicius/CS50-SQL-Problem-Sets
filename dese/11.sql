@@ -20,6 +20,7 @@
 
 -- LIMIT 50
 -- ;
+-- Time to face my fears of joins, actually started comprehending it properly below. 
 
 SELECT
     *
