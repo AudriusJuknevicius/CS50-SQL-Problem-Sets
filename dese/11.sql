@@ -27,9 +27,8 @@ FROM
     "districts" as dis
 INNER JOIN "staff_evaluations" as sta ON dis.id = sta.district_id
 INNER JOIN "expenditures" as exp ON dis.id = exp.district_id
-INNER JOIN "schools" as sch ON 
-INNER JOIN "graduation_rates" as gra
-
+INNER JOIN "schools" as sch ON dis.id = sch.district_id
+INNER JOIN "graduation_rates" as gra ON gra.school_id = sch.id
 
 LIMIT 50
 ;
