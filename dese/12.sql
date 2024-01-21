@@ -16,6 +16,13 @@ WHERE
         FROM
             "expenditures"
     )
+    and
+    sta.exemplary > (
+        SELECT
+        AVG(exemplary)
+        FROM
+            "staff_evaluations"
+    )
 LIMIT 50
 ;
 
