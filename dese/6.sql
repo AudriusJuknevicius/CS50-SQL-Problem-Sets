@@ -7,4 +7,4 @@ FROM
 "schools" AS sch
 JOIN "graduation_rates" gra on gra.school_id = sch.id
 WHERE
-"graduated" = 100
+gra.graduated = 100
