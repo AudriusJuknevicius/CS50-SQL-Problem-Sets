@@ -1,8 +1,4 @@
 SELECT
-    count(*)
-    FROM
-    (
-SELECT
     dis.name,
     exp.per_pupil_expenditure,
     sta.exemplary
@@ -28,7 +24,6 @@ WHERE
             "staff_evaluations"
     )
     ORDER BY sta.exemplary DESC, exp.per_pupil_expenditure DESC
-    )
     ;
 
 
