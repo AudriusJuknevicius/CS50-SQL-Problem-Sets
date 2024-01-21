@@ -23,6 +23,7 @@ WHERE
         FROM
             "staff_evaluations"
     )
+    
 LIMIT 50
 ;
 
