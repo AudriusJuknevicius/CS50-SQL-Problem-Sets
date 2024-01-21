@@ -14,3 +14,15 @@ GROUP BY "year"
 ORDER BY "year" desc
 
 ;
+
+SELECT
+    sal.year,
+    sal.salary
+
+FROM
+    "players" AS pla
+INNER JOIN "salaries" as sal ON sal.player_id = pla.id
+WHERE
+    pla.first_name = "Cal" and pla.last_name like "Ripken%"
+ORDER BY sal.year DESC
+;
