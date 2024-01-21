@@ -20,10 +20,12 @@
 
 -- LIMIT 50
 -- ;
--- Time to face my fears of joins, actually started comprehending it properly below. 
+-- Time to face my fears of joins, actually started comprehending it properly below.
 
 SELECT
-    *
+    sch.name,
+    exp.per_pupil_expenditure,
+    gra.graduated
 FROM
     "districts" as dis
 INNER JOIN "staff_evaluations" as sta ON dis.id = sta.district_id
