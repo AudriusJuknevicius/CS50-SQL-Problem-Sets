@@ -18,3 +18,10 @@ SELECT
 FROM
 "staff_evaluations"
 ;
+
+
+
+
+COLUMNS:
+
+PUBLIC SCHOOL DISTRICT / Above Average Per Pupil Expenditures / Above Average Percentage of Teachers rated exemplary
