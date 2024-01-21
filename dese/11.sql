@@ -25,9 +25,9 @@ SELECT
     *
 FROM
     "districts" as dis
-INNER JOIN "staff_evaluations" as sta
-INNER JOIN "expenditures" as exp
-INNER JOIN "schools" as sch
+INNER JOIN "staff_evaluations" as sta ON dis.id = sta.district_id
+INNER JOIN "expenditures" as exp ON dis.id = exp.district_id
+INNER JOIN "schools" as sch ON 
 INNER JOIN "graduation_rates" as gra
 
 
