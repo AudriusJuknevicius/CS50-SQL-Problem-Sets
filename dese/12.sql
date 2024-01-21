@@ -12,8 +12,9 @@ WHERE
     sch.type = "Public School" and
     exp.per_pupil_expenditure > (
         SELECT
-        AVG(exp.per_pupil_expenditure
-        )
+        AVG(per_pupil_expenditure)
+        FROM
+            "expenditures"
     )
 LIMIT 50
 ;
