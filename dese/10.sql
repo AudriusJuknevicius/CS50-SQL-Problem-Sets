@@ -2,9 +2,9 @@ SELECT
     d.name,
     e.per_pupil_expenditure
 FROM
-    "districts" d
+    "districts" as d
 INNER JOIN
-    "expenditures" e ON d.id = e.id
+    "expenditures" as e ON d.id = e.id
 WHERE
     d.type = "Public School"
 ORDER BY e.per_pupil_expenditure DESC
