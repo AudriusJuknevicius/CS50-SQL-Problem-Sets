@@ -1,5 +1,9 @@
 SELECT
-    dis.name,
+    COUNT(*)
+    FROM
+    (
+SELECT
+    DISTINCT dis.name,
     exp.per_pupil_expenditure,
     sta.exemplary
 FROM
@@ -24,6 +28,7 @@ WHERE
             "staff_evaluations"
     )
     ORDER BY sta.exemplary DESC, exp.per_pupil_expenditure DESC
+    )
     ;
 
 
