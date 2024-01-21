@@ -5,3 +5,12 @@
 -- Sort by year in descending order.
 -- Your query should return a table with two columns, one for year and one for salary.
 
+SELECT
+    "year",
+    "salary"
+FROM
+    "salaries"
+GROUP BY "year"
+ORDER BY "year" desc
+
+;
