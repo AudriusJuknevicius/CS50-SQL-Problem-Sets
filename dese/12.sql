@@ -11,7 +11,8 @@ INNER JOIN "graduation_rates" as gra ON sch.id = gra.school_id
 WHERE
     sch.type = "Public School" and
     exp.per_pupil_expenditure > (
-        SELECT AVG("exp".per_pupil_expenditure
+        SELECT
+        AVG(exp.per_pupil_expenditure
         )
     )
 LIMIT 50
