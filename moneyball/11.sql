@@ -16,12 +16,12 @@
 SELECT
     pla.first_name,
     pla.last_name,
-    per.h > 0 /sal.salary AS [dollars per hit]
+    per.h/sal.salary AS [dollars per hit]
 FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 WHERE
-    per.year = sal.year and per.year = 2001
+    per.year = sal.year and per.year = 2001 and per.h > 0
 LIMIT 50
 ;
