@@ -8,19 +8,15 @@
 
 SELECT
     DISTINCT tea.name,
-    sal.salary as [average salary]
+    ROUND(AVG(sal.salary),2) as [average salary]
 FROM
     "players" AS pla
 INNER JOIN "performances" as per on per.player_id = pla.id
 INNER JOIN "teams" AS tea on tea.id = per.team_id
 INNER JOIN "salaries" as sal on sal.player_id = pla.id
 WHERE
-sal.year = 2001 and sal.salary <(
-    SELECT
-        ROUND(AVG("salary"),2)
-    FROM
-        "salaries"
-)
+sal.year = 2001
+GROUP BY tea.name
 ORDER BY sal.salary ASC
 LIMIT 5
 ;
