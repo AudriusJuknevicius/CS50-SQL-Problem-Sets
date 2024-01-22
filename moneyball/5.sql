@@ -2,13 +2,21 @@
 -- Though Satchel no longer plays, in 5.sql, write a SQL query to find all teams that Satchel Paige played for.
 -- Your query should return a table with a single column, one for the name of the teams.
 
+-- SELECT
+--     DISTINCT tea.name
+-- FROM
+--     "players" AS pla
+-- INNER JOIN "salaries" as sal on sal.player_id = pla.id
+-- INNER JOIN "teams" AS tea on tea.id = sal.team_id
+-- WHERE
+-- pla.first_name = "Satchel" and pla.last_name = "Paige"
+-- ;
+
 SELECT
-    DISTINCT tea.name
+    *
 FROM
-    "players" AS pla
-INNER JOIN "salaries" as sal on sal.player_id = pla.id
-INNER JOIN "teams" AS tea on tea.id = sal.team_id
+    "players"
 WHERE
-pla.first_name = "Satchel" and pla.last_name = "Paige"
+"first_name" = "Satchel" and "last_name" = "Paige"
 ;
 
