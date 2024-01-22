@@ -52,6 +52,5 @@ WHERE
 ORDER BY
     sal.salary / per.RBI ASC,
 LIMIT 10))
-ORDER BY id
 ;
 
