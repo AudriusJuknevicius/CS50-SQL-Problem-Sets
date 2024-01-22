@@ -15,6 +15,5 @@ INNER JOIN "salaries" as sal on sal.team_id = tea.id
 WHERE
 sal.year = 2001
 GROUP BY tea.id
-ORDER BY sal.salary ASC
-LIMIT 5
+ORDER BY average salary
 ;
