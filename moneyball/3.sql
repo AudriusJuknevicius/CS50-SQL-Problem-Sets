@@ -13,7 +13,7 @@ FROM
     "players" as pla
 INNER JOIN "performances" as per ON per.player_id = pla.id
 WHERE
-pla.first_name = "Ken" and pla.birth_year = 1969
+pla.first_name like "Ken%" and pla.birth_year = 1969
 GROUP BY per.year
 ORDER BY per.year DESC
 ;
