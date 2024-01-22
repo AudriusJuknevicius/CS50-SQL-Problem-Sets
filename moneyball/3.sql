@@ -6,12 +6,18 @@
 -- Note that there may be two players with the name “Ken Griffey.” This Ken Griffey was born in 1969.
 -- Your query should return a table with two columns, one for year and one for home runs.
 
+-- SELECT
+--     per.year,
+--     per.HR
+-- FROM
+--     "players" as pla
+-- INNER JOIN "performances" as per ON per.player_id = pla.id
+-- WHERE
+-- pla.first_name like "Ken%" and pla.birth_year = 1969
+-- ;
+
 SELECT
-    per.year,
-    per.HR
+    *
 FROM
-    "players" as pla
-INNER JOIN "performances" as per ON per.player_id = pla.id
-WHERE
-pla.first_name like "Ken%" and pla.birth_year = 1969
+    "performances"
 ;
