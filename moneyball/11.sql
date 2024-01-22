@@ -16,7 +16,7 @@
 SELECT
     pla.first_name,
     pla.last_name,
-    per.h/sal.salary AS [dollars per hit]
+    sal.salary/per.h AS [dollars per hit]
 FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
