@@ -14,6 +14,7 @@ FROM
 INNER JOIN "performances" as per ON per.player_id = pla.id
 WHERE
 pla.first_name like "Ken%" and pla.birth_year = 1969
+ORDER BY per.year DESC
 ;
 
 -- SELECT
