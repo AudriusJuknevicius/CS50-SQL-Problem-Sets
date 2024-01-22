@@ -11,6 +11,6 @@ JOIN "salaries" as sal on sal.player_id = pla.id
 WHERE
 sal.year = 2001
 ORDER BY per.HR DESC
-LIMIT 5
+LIMIT 1
 ;
 
