@@ -28,4 +28,5 @@ FROM
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 ORDER BY pla.id ASC, per.year DESC, per.hr DESC, sal.salary DESC
+LIMIT 500
 ;
