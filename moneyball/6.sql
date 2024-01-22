@@ -7,7 +7,7 @@
 
 SELECT
     DISTINCT tea.name,
-    SUM(per.H) as [total hits]
+    SUM(per.H) as total_hits
 FROM
     "players" AS pla
 INNER JOIN "performances" as per on per.player_id = pla.id
@@ -16,6 +16,5 @@ INNER JOIN "teams" AS tea on tea.id = per.team_id
 WHERE
     tea.year = 2001
 GROUP BY tea.name
-ORDER BY "total hits" DESC
-LIMIT 5
+ORDER BY total_hits DESC
 ;
