@@ -3,12 +3,12 @@
 -- Your query should return a table with a single column, one for the name of the teams.
 
 SELECT
-    tea.name
+    DISTINCT tea.name
 FROM
     "players" AS pla
-FULL OUTER JOIN "salaries" as sal on sal.player_id = pla.id
-FULL OUTER JOIN "teams" AS tea on tea.id = sal.team_id
-WHERE
-pla.first_name = "Satchel"
+INNER JOIN "salaries" as sal on sal.player_id = pla.id
+INNER JOIN "teams" AS tea on tea.id = sal.team_id
+-- WHERE
+-- pla.first_name = "Satchel" and pla.last_name = "Paige"
 ;
 
