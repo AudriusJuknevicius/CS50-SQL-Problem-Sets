@@ -6,4 +6,12 @@
 
 
 SELECT
-    
+    DISTINCT tea.name
+FROM
+    "players" AS pla
+INNER JOIN "performances" as per on per.player_id = pla.id
+INNER JOIN "teams" AS tea on tea.id = per.team_id
+-- INNER JOIN "salaries" as sal on sal.player_id = pla.id
+WHERE
+pla.first_name = "Satchel" and pla.last_name = "Paige"
+;
