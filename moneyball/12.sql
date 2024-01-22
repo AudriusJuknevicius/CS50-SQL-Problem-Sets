@@ -10,8 +10,11 @@
 
 
 
-SELECT pla.first_name, pla.last_name FROM (
-    
+SELECT
+    pla.first_name,
+    pla.last_name
+FROM
+    (
 SELECT
     pla.first_name,
     pla.last_name
@@ -27,8 +30,11 @@ LIMIT 10)
 
 INTERSECT
 
-SELECT pla.first_name, pla.last_name FROM(
-
+SELECT
+    pla.first_name,
+    pla.last_name
+FROM
+    (
 SELECT
     pla.first_name,
     pla.last_name
@@ -40,7 +46,8 @@ WHERE
     per.year = sal.year and per.year = 2001 and per.RBI > 0
 ORDER BY
     sal.salary / per.RBI ASC,
-LIMIT 10))
-ORDER BY pla.id
+LIMIT 10)
+ORDER BY id
+LIMIT 6
 ;
 
