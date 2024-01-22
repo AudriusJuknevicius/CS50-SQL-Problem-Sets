@@ -19,7 +19,7 @@ FROM
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 WHERE
-    per.year = sal.year and per.year = 2001 and per.RBI > 0
-ORDER BY pla.id ASC, sal.salary/per.RBI ASC
+    per.year = sal.year and per.year = 2001 and per.RBI > 0 and per.H > 0
+ORDER BY pla.id ASC, sal.salary/per.h, sal.salary/per.RBI ASC
 LIMIT 10
 ;
