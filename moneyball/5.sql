@@ -8,7 +8,7 @@ FROM
     "players" AS pla
 INNER JOIN "salaries" as sal on sal.player_id = pla.id
 INNER JOIN "teams" AS tea on tea.id = sal.team_id
--- WHERE
--- pla.first_name = "Satchel" and pla.last_name = "Paige"
+WHERE
+pla.first_name = "Satchel" and pla.last_name = "Paige"
 ;
 
