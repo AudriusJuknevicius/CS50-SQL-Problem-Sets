@@ -3,7 +3,7 @@
 -- Your query should return a table with one column, the salary of the player.
 
 SELECT
-     sal.salary
+     *
 FROM
     "players" AS pla
 INNER JOIN "performances" as per on per.player_id = pla.id
@@ -14,3 +14,4 @@ per.year = 2001
 ORDER BY per.H DESC
 LIMIT 5
 ;
+
