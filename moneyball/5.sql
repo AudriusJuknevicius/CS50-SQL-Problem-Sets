@@ -5,9 +5,10 @@
 SELECT
     tea.name
 FROM
-    "players" as pla
-NATURAL JOIN "teams" as tea
+    "players" AS pla
+INNER JOIN "teams" AS tea on tea.id = pla.id
 WHERE
-pla.first_name = "Satchel" and pla.last_name = "Paige"
+pla.first_name = "Satchel"
+GROUP BY pla.id
 ;
 
