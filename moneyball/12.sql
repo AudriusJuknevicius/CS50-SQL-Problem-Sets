@@ -55,42 +55,44 @@
 -- LIMIT 10
 -- ));
 
-SELECT
-    first_name,
-    last_name
-FROM
-    (
-        SELECT
-            pla.first_name,
-            pla.last_name
-        FROM
-            "players" as pla
-        JOIN "salaries" as sal ON sal.player_id = pla.id
-        JOIN "performances" as per ON per.player_id = pla.id
-        WHERE
-            per.year = sal.year and per.year = 2001 and per.H > 0
-        ORDER BY
-            sal.salary / per.H ASC
-        LIMIT 10
-    )
+-- SELECT
+--     first_name,
+--     last_name
+-- FROM
+--     (
+--         SELECT
+--             pla.first_name,
+--             pla.last_name
+--         FROM
+--             "players" as pla
+--         JOIN "salaries" as sal ON sal.player_id = pla.id
+--         JOIN "performances" as per ON per.player_id = pla.id
+--         WHERE
+--             per.year = sal.year and per.year = 2001 and per.H > 0
+--         ORDER BY
+--             sal.salary / per.H ASC
+--         LIMIT 10
+--     ) as ID
 
-INTERSECT
+-- INTERSECT
 
-SELECT
-    first_name,
-    last_name
-FROM
-    (
-        SELECT
-            pla.first_name,
-            pla.last_name
-        FROM
-            "players" as pla
-        JOIN "salaries" as sal ON sal.player_id = pla.id
-        JOIN "performances" as per ON per.player_id = pla.id
-        WHERE
-            per.year = sal.year and per.year = 2001 and per.RBI > 0
-        ORDER BY
-            sal.salary / per.RBI ASC
-        LIMIT 10
-    );
+-- SELECT
+--     first_name,
+--     last_name
+-- FROM
+--     (
+--         SELECT
+--             pla.first_name,
+--             pla.last_name
+--         FROM
+--             "players" as pla
+--         JOIN "salaries" as sal ON sal.player_id = pla.id
+--         JOIN "performances" as per ON per.player_id = pla.id
+--         WHERE
+--             per.year = sal.year and per.year = 2001 and per.RBI > 0
+--         ORDER BY
+--             sal.salary / per.RBI ASC
+--         LIMIT 10
+--     ) as ID
+--     order by ID
+--     ;
