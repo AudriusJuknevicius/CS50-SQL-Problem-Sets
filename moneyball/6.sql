@@ -33,6 +33,11 @@
 
 
 SELECT
+    tea.id,
+    per.id,
+    per.team_id,
+    tea.year,
+    per.year,
     tea.name,
     per.H as total_hits
 FROM
@@ -43,6 +48,6 @@ INNER JOIN "performances" as per on tea.id = per.team_id
 WHERE
     per.year = 2001
 ORDER BY total_hits DESC
-LIMIT 5
+LIMIT 50
 ;
 
