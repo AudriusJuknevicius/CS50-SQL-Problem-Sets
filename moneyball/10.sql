@@ -18,7 +18,7 @@
 
 
 SELECT
-    DISTINCT pla.first_name,
+    pla.first_name,
     pla.last_name,
     sal.salary,
     per.year,
@@ -27,6 +27,6 @@ FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
-ORDER BY pla.id ASC
+ORDER BY pla.id ASC, per.year DESC
 LIMIT 200
 ;
