@@ -7,11 +7,10 @@
 
 
 SELECT
-    DISTINCT tea.name,
+    tea.name,
     ROUND(AVG(sal.salary),2) as [average salary]
 FROM
-    
-INNER JOIN "teams" AS tea on tea.id = per.team_id
+    "teams" as tea
 INNER JOIN "salaries" as sal on sal.team_id = tea.id
 WHERE
 sal.year = 2001
