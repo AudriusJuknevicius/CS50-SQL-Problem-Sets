@@ -10,7 +10,7 @@ INNER JOIN "performances" as per on per.player_id = pla.id
 INNER JOIN "teams" AS tea on tea.id = per.team_id
 INNER JOIN "salaries" as sal on sal.player_id = pla.id
 WHERE
-sal.year = 2001
+    per.year = 2001
 ORDER BY per.H DESC
 LIMIT 5
 ;
