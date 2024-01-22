@@ -33,10 +33,6 @@
 
 
 SELECT
-    tea.id,
-    per.team_id,
-    tea.year,
-    per.year,
     tea.name,
     SUM(per.H) as total_hits
 FROM
@@ -48,5 +44,6 @@ WHERE
     per.year = 2001
 GROUP BY tea.name
 ORDER BY total_hits DESC
+LIMIT 5
 ;
 
