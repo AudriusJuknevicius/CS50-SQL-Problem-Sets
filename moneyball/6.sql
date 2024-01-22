@@ -6,7 +6,7 @@
 
 
 SELECT
-    tea.name,
+    DISTINCT tea.name,
     SUM(per.H) as [total hits]
 FROM
     "players" AS pla
