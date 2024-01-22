@@ -16,7 +16,7 @@ INNER JOIN "teams" AS tea on tea.id = per.team_id
 INNER JOIN "salaries" as sal on sal.player_id = pla.id
 WHERE
 sal.year = 2001
-GROUP BY tea.name
+GROUP BY tea.id
 ORDER BY sal.salary ASC
 LIMIT 5
 ;
