@@ -6,7 +6,7 @@
 
 
 SELECT
-    DISTINCT tea.name,
+    tea.name,
     per.H as [total hits]
 FROM
     "players" AS pla
