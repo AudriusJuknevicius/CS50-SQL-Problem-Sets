@@ -31,7 +31,8 @@ WHERE
     per.year = sal.year and per.year = 2001 and per.H > 0
 ORDER BY
     sal.salary / per.h ASC
-LIMIT 10)
+LIMIT 10
+)
 
 INTERSECT
 
