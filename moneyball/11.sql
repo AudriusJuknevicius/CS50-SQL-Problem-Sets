@@ -23,5 +23,6 @@ JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 WHERE
     per.year = sal.year and per.year = 2001 and per.h > 0
-LIMIT 50
+ORDER BY "dollars per hit" ASC, pla.first_name ASC, pla.last_name ASC
+LIMIT 10
 ;
