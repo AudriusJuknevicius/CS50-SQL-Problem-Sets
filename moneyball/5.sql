@@ -12,11 +12,19 @@
 -- pla.first_name = "Satchel" and pla.last_name = "Paige"
 -- ;
 
+-- SELECT
+--     *
+-- FROM
+--     "players"
+-- WHERE
+-- "first_name" = "Satchel" and "last_name" = "Paige"
+-- ;
+
+
 SELECT
     *
 FROM
-    "players"
+    "performances"
 WHERE
-"first_name" = "Satchel" and "last_name" = "Paige"
+"player_id" = 14190
 ;
-
