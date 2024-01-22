@@ -6,3 +6,5 @@
 -- Note that there may be two players with the name “Ken Griffey.” This Ken Griffey was born in 1969.
 -- Your query should return a table with two columns, one for year and one for home runs.
 
+SELECT
+    
