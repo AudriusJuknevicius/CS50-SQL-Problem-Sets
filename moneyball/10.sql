@@ -21,7 +21,7 @@ SELECT
     DISTINCT pla.first_name,
     pla.last_name,
     sal.salary,
-    sal.year,
+    per.year,
     per.HR
 FROM
     "players" as pla
