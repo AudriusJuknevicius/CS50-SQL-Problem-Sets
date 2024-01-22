@@ -33,17 +33,18 @@
 
 
 SELECT
-    DISTINCT tea.name,
-    SUM(DISTINCT per.H) as total_hits
+    *
+    -- DISTINCT tea.name,
+    -- SUM(DISTINCT per.H) as total_hits
 FROM
     "teams" AS tea
 INNER JOIN "performances" as per on tea.id = per.team_id
 -- INNER JOIN "teams" AS tea on tea.id = per.team_id
 -- INNER JOIN "salaries" as sal on sal.player_id = pla.id
-WHERE
-    tea.year = 2001 and per.year = 2001
-GROUP BY tea.name
-ORDER BY total_hits DESC
-LIMIT 5
+-- WHERE
+--     tea.year = 2001 and per.year = 2001
+-- GROUP BY tea.name
+-- ORDER BY total_hits DESC
+LIMIT 100
 ;
 
