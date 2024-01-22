@@ -19,6 +19,11 @@ SELECT
     pla.first_name,
     pla.last_name
 FROM
+    (
+SELECT
+    pla.first_name,
+    pla.last_name
+FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
@@ -46,8 +51,7 @@ WHERE
     per.year = sal.year and per.year = 2001 and per.RBI > 0
 ORDER BY
     sal.salary / per.RBI ASC,
-LIMIT 10)
+LIMIT 10))
 ORDER BY id
-LIMIT 6
 ;
 
