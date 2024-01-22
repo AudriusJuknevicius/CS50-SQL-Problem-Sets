@@ -10,6 +10,24 @@
 
 
 
+SELECT pla.first_name, pla.last_name FROM (
+    
+SELECT
+    pla.first_name,
+    pla.last_name
+FROM
+    "players" as pla
+JOIN "salaries" as sal on sal.player_id = pla.id
+JOIN "performances" as per on per.player_id = pla.id
+WHERE
+    per.year = sal.year and per.year = 2001 and per.H > 0
+ORDER BY
+    sal.salary / per.h ASC
+LIMIT 10)
+
+INTERSECT
+
+SELECT pla.first_name, pla.last_name FROM(
 
 SELECT
     pla.first_name,
@@ -19,10 +37,10 @@ FROM
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 WHERE
-    per.year = sal.year and per.year = 2001 and per.RBI > 0 and per.H > 0
+    per.year = sal.year and per.year = 2001 and per.RBI > 0
 ORDER BY
-    pla.id ASC,
-    sal.salary / per.h ASC
     sal.salary / per.RBI ASC,
-LIMIT 6
+LIMIT 10))
+ORDER BY pla.id
 ;
+
