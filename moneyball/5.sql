@@ -6,7 +6,8 @@ SELECT
     tea.name
 FROM
     "players" AS pla
-INNER JOIN "teams" AS tea on tea.id = pla.id
+INNER JOIN "salaries" as sal on sal.player_id = pla.id
+INNER JOIN "teams" AS tea on tea.id = sal.team_id
 WHERE
 pla.first_name = "Satchel"
 GROUP BY tea.name
