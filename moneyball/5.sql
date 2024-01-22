@@ -6,10 +6,9 @@ SELECT
     tea.name
 FROM
     "players" AS pla
-INNER JOIN "salaries" as sal on sal.player_id = pla.id
-INNER JOIN "teams" AS tea on tea.id = sal.team_id
+FULL OUTER JOIN "salaries" as sal on sal.player_id = pla.id
+FULL OUTER JOIN "teams" AS tea on tea.id = sal.team_id
 WHERE
 pla.first_name = "Satchel"
-GROUP BY tea.name
 ;
 
