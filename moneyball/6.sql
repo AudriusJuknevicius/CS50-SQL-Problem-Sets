@@ -6,7 +6,8 @@
 
 
 SELECT
-    
+    tea.name,
+    per.H
 FROM
     "players" AS pla
 INNER JOIN "performances" as per on per.player_id = pla.id
