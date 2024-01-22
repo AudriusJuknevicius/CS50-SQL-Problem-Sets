@@ -25,7 +25,7 @@ SELECT
     SUM(per.H) as total_hits
 FROM
     "teams" AS tea
-FULL JOIN "performances" as per on tea.id = per.team_id
+INNER JOIN "performances" as per on tea.id = per.team_id
 -- INNER JOIN "teams" AS tea on tea.id = per.team_id
 -- INNER JOIN "salaries" as sal on sal.player_id = pla.id
 WHERE
