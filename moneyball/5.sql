@@ -9,6 +9,6 @@ FROM
 INNER JOIN "teams" AS tea on tea.id = pla.id
 WHERE
 pla.first_name = "Satchel"
-GROUP BY pla.id
+GROUP BY tea.year
 ;
 
