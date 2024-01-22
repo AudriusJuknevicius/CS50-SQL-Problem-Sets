@@ -7,7 +7,7 @@
 
 
 SELECT
-    tea.name,
+    DISTINCT tea.name,
     sal.salary as [average salary]
 FROM
     "players" AS pla
