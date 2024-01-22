@@ -27,5 +27,6 @@ FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
+ORDER BY pla.id ASC
 LIMIT 200
 ;
