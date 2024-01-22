@@ -21,7 +21,8 @@ JOIN "performances" as per on per.player_id = pla.id
 WHERE
     per.year = sal.year and per.year = 2001 and per.RBI > 0 and per.H > 0
 ORDER BY
-    sal.salary / per.h ASC,
-    sal.salary / per.RBI ASC
+    pla.id ASC,
+    sal.salary / per.h ASC
+    sal.salary / per.RBI ASC,
 LIMIT 6
 ;
