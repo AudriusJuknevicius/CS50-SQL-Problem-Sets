@@ -22,6 +22,6 @@ FROM
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 WHERE
-    per.year = sal.year
+    per.year = sal.year and per.year = 2001 and per.h = 
 ORDER BY pla.id ASC, per.year DESC, per.hr DESC, sal.salary DESC
 ;
