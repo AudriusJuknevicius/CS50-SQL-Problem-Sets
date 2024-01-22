@@ -16,17 +16,20 @@
 -- in descending order, followed by salary, in descending order.
 -- Be careful to ensure that, for a single row, the salary’s year and the performance’s year match.
 
-
+SELECT
+    COUNT(*)
+    FROM
+    (
 SELECT
     pla.first_name,
     pla.last_name,
     sal.salary,
-    per.year,
+    sal.year,
     per.HR
 FROM
     "players" as pla
 JOIN "salaries" as sal on sal.player_id = pla.id
 JOIN "performances" as per on per.player_id = pla.id
 ORDER BY pla.id ASC, per.year DESC, per.hr DESC, sal.salary DESC
-LIMIT 500
-;
+    )
+    ;
