@@ -30,8 +30,8 @@ pla.first_name = "Satchel" and pla.last_name = "Paige"
 -- "player_id" = 14190
 -- ;
 
-SELECT
-    *
-FROM
-    "teams"
-;
+-- SELECT
+--     *
+-- FROM
+--     "teams"
+-- ;
