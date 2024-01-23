@@ -9,7 +9,7 @@ CREATE TABLE "passengers" (
 CREATE TABLE "check-ins" (
     "id" INTEGER,
     "passenger_id" INTEGER,
-    "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "datetime" TEXT,
     "flight_id" INTEGER
     PRIMARY KEY("id"),
     FOREIGN KEY("passenger_id") REFERENCES "passengers"("id"),
@@ -20,7 +20,7 @@ CREATE TABLE "airlines" (
     "id" INTEGER,
     "airline" TEXT,
     "concourse" TEXT
-)
+);
 
 CREATE TABLE "flights" (
     "id" INTEGER,
@@ -32,5 +32,6 @@ CREATE TABLE "flights" (
     "arrival_time" TEXT
     PRIMARY KEY("id"),
     FOREIGN KEY("airline_name") REFERENCES "airlines"("id"),
-    FOREIGN KEY(")
-)
+    FOREIGN KEY("concourse_departure_name") REFERENCES "airlines" ("id"),
+    FOREIGN KEY("concourse_destination_name") REFERENCES "airlines" ("id")
+);
