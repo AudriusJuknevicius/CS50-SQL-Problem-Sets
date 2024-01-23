@@ -6,4 +6,9 @@ CREATE TABLE "passengers" (
 
 );
 
-CREATE TABLE "
+CREATE TABLE "check-ins" (
+    "id" INTEGER,
+    "passenger_id" INTEGER,
+    "first_name
+    "
+);
