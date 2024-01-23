@@ -18,8 +18,7 @@ CREATE TABLE "schools and universities" (
     "school_location" TEXT NOT NULL,
     "school_founded_year" TEXT,
     PRIMARY KEY("id"),
-    FOREIGN KEY("passenger_id") REFERENCES "passengers"("id"),
-    FOREIGN KEY("flight_id") REFERENCES "flights"("id")
+    FOREIGN KEY("school_pupil") REFERENCES "users"("id")
 );
 
 CREATE TABLE "companies" (
@@ -32,6 +31,7 @@ CREATE TABLE "companies" (
     "company_industry" TEXT NOT NULL,
     "company_location" TEXT NOT NULL,
     PRIMARY KEY("id")
+    FOREIGN KEY("company_employee") REFERENCES "users"("id")
 );
 
 
