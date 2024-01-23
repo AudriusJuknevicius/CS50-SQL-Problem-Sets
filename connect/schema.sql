@@ -1,8 +1,9 @@
-CREATE TABLE "passengers" (
+CREATE TABLE "users" (
     "id" INTEGER,
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
-    "age" INTEGER NOT NULL,
+    "username" TEXT NOT NULL UNIQUE,
+    "password" TEXT NOT NULL,
     PRIMARY KEY("id")
 );
 
@@ -36,5 +37,6 @@ CREATE TABLE "flights" (
     FOREIGN KEY("concourse_departure_name") REFERENCES "airlines" ("id"),
     FOREIGN KEY("concourse_destination_name") REFERENCES "airlines" ("id")
 );
+
 
 
