@@ -26,19 +26,8 @@ CREATE TABLE "companies" (
     PRIMARY KEY("id")
 );
 
-CREATE TABLE "flights" (
-    "id" INTEGER,
-    "flight_number" INTEGER,
-    "airline_name" TEXT,
-    "concourse_departure_name" TEXT,
-    "concourse_destination_name" TEXT,
-    "departure_time" TEXT,
-    "arrival_time" TEXT,
-    PRIMARY KEY("id"),
-    FOREIGN KEY("airline_name") REFERENCES "airlines"("id"),
-    FOREIGN KEY("concourse_departure_name") REFERENCES "airlines" ("id"),
-    FOREIGN KEY("concourse_destination_name") REFERENCES "airlines" ("id")
-);
+
+
 
 
 
