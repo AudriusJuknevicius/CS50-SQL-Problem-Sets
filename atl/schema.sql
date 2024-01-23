@@ -30,5 +30,7 @@ CREATE TABLE "flights" (
     "concourse_destination_name" TEXT,
     "departure_time" TEXT,
     "arrival_time" TEXT
-    "
+    PRIMARY KEY("id"),
+    FOREIGN KEY("airline_name") REFERENCES "airlines"("id"),
+    FOREIGN KEY(")
 )
