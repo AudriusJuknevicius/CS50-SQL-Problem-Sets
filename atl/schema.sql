@@ -28,6 +28,7 @@ CREATE TABLE "flights" (
     "airline_name" TEXT,
     "concourse_departure_name" TEXT,
     "concourse_destination_name" TEXT,
-    "departure_time" DATETIME,
+    "departure_time" TEXT,
+    "arrival_time" TEXT
     "
 )
