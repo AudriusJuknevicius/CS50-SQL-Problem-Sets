@@ -12,5 +12,12 @@ CREATE TABLE "check-ins" (
     "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "flight_id" INTEGER
     PRIMARY KEY("id"),
-    FOREIGN KEY
+    FOREIGN KEY("passenger_id") REFERENCES "passengers"("id"),
+    FOREIGN KEY("flight_id") REFERENCES "flights"("id")
 );
+
+CREATE TABLE "airlines" (
+    "id" INTEGER,
+    "airline" TEXT,
+    "concourse" TEXT
+)
