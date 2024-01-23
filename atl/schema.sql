@@ -20,6 +20,7 @@ CREATE TABLE "airlines" (
     "id" INTEGER,
     "airline" TEXT,
     "concourse" TEXT
+    PRIMARY KEY("id")
 );
 
 CREATE TABLE "flights" (
