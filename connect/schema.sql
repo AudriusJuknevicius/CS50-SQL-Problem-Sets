@@ -9,6 +9,7 @@ CREATE TABLE "users" (
 
 CREATE TABLE "schools and universities" (
     "id" INTEGER,
+    "school_pupil" TEXT NOT NULL,
     "school_name" TEXT NOT NULL,
     "school_type" TEXT NOT NULL,
     "school_location" TEXT NOT NULL,
@@ -20,6 +21,7 @@ CREATE TABLE "schools and universities" (
 
 CREATE TABLE "companies" (
     "id" INTEGER,
+    "company_employee" TEXT NOT NULL,
     "company_name" TEXT NOT NULL,
     "company_industry" TEXT NOT NULL,
     "company_location" TEXT NOT NULL,
