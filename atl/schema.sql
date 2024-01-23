@@ -21,3 +21,13 @@ CREATE TABLE "airlines" (
     "airline" TEXT,
     "concourse" TEXT
 )
+
+CREATE TABLE "flights" (
+    "id" INTEGER,
+    "flight_number" INTEGER,
+    "airline_name" TEXT,
+    "concourse_departure_name" TEXT,
+    "concourse_destination_name" TEXT,
+    "departure_time" DATE, 
+    "
+)
