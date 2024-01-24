@@ -29,8 +29,8 @@ CREATE TABLE "ingredients" (
     "id" INTEGER,
     "ingredient" TEXT NOT NULL,
     "weight" INTEGER NOT NULL,
-    "price_per_unit" INTEGER NOT NULL UNIQUE,
-    "gluten_check" TEXT NOT NULL,
+    "price_per_unit" NUMERIC NOT NULL,
+    "gluten_check" TEXT NOT NULL CHECK("gluten_check" in ('Gluten', 'Gluten-Free')),
     PRIMARY KEY("id")
 );
 
@@ -38,14 +38,12 @@ CREATE TABLE "donuts" (
     "id" INTEGER,
     "donut_name" TEXT NOT NULL,
     "donut_gluten" TEXT NOT NULL CHECK("donut_gluten" in ('Gluten', 'Gluten-Free'))
-    "pupil_affiliation_end" TEXT,
-    "pupil_degree_type" TEXT CHECK("pupil_degree_type" IN ('BA', 'BSc', 'MA', 'PhD')),
-    "school_name" TEXT NOT NULL,
-    "school_type" TEXT NOT NULL,
-    "school_location" TEXT NOT NULL,
-    "school_founded_year" TEXT,
+    "donut_price" NUMERIC,
+    "donut_ingredients" TEXT NOT NULL,
     PRIMARY KEY("id"),
-    FOREIGN KEY("donut_gluten") REFERENCES "ingredients"("gluten_check")
+    FOREIGN KEY("donut_gluten") REFERENCES "ingredients"("gluten_check"),
+    FOREIGN KEY("donut_ingredients") REFERENCES "ingredients"("id")
+
 );
 
 CREATE TABLE "companies" (
