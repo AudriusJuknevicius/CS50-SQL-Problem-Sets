@@ -1,30 +1,3 @@
-ingredients
-
-ingredient flour, yeast, oil, butter, sugar
-weight grams
-price per unit
-donut_ingredients
-
-DONUTS
-
-Donut Name
-Donut_Gluten
-Donut_price
-
-
-ORDERS
-
-Order Number
-Donut Order
-Customer
-
-
-Customers
-
-First_name
-last_name
-order_history
-
 CREATE TABLE "ingredients" (
     "id" INTEGER,
     "ingredient" TEXT NOT NULL,
@@ -49,9 +22,20 @@ CREATE TABLE "donuts" (
 CREATE TABLE "orders" (
     "id" INTEGER,
     "order_number" TEXT NOT NULL UNIQUE,
-    "donut_order" TEXT NOT NULL UNIQUE,
+    "donut_order" TEXT NOT NULL,
     "customer_id" INTEGER NOT NULL UNIQUE,
     PRIMARY KEY("id"),
-    FOREIGN KEY("company_employee") REFERENCES "users"("id")
+    FOREIGN KEY("customer_id") REFERENCES "customers"("id"),
+    FOREIGN KEY("donut_name") REFERENCES "donuts"("id")
 );
+
+CREATE TABLE "customers" (
+    "id" INTEGER,
+    "first_name" TEXT NOT NULL,
+    "last_name" TEXT NOT NULL,
+    "order_history" TEXT NOT NULL UNIQUE,
+    PRIMARY KEY("id"),
+    FOREIGN KEY("order_history") REFERENCES "orders"("id")
+);
+
 
