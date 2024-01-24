@@ -46,15 +46,11 @@ CREATE TABLE "donuts" (
 
 );
 
-CREATE TABLE "companies" (
+CREATE TABLE "orders" (
     "id" INTEGER,
-    "company_employee" TEXT NOT NULL,
-    "employee_start_date" TEXT NOT NULL,
-    "employee_finish_date" TEXT,
-    "employee_title" TEXT NOT NULL,
-    "company_name" TEXT NOT NULL,
-    "company_industry" TEXT NOT NULL,
-    "company_location" TEXT NOT NULL,
+    "order_number" TEXT NOT NULL UNIQUE,
+    "donut_order" TEXT NOT NULL UNIQUE,
+    "customer_id" INTEGER NOT NULL UNIQUE,
     PRIMARY KEY("id"),
     FOREIGN KEY("company_employee") REFERENCES "users"("id")
 );
