@@ -30,11 +30,10 @@ CREATE TABLE "ingredients" (
     "ingredient" TEXT NOT NULL,
     "weight" INTEGER NOT NULL,
     "price_per_unit" INTEGER NOT NULL UNIQUE,
-    "" TEXT NOT NULL,
     PRIMARY KEY("id")
 );
 
-CREATE TABLE "schools_and_universities" (
+CREATE TABLE "donuts" (
     "id" INTEGER,
     "school_pupil" TEXT NOT NULL,
     "pupil_affiliation_start" TEXT NOT NULL,
