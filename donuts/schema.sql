@@ -28,8 +28,8 @@ order_history
 CREATE TABLE "ingredients" (
     "id" INTEGER,
     "ingredient" TEXT NOT NULL,
-    "weight" TEXT NOT NULL,
-    "price_per_unit" TEXT NOT NULL UNIQUE,
+    "weight" INTEGER NOT NULL,
+    "price_per_unit" INTEGER NOT NULL UNIQUE,
     "" TEXT NOT NULL,
     PRIMARY KEY("id")
 );
