@@ -1,11 +1,11 @@
--- CREATE TABLE "ingredients" (
---     "id" INTEGER,
---     "ingredient" TEXT NOT NULL,
---     "weight" INTEGER NOT NULL,
---     "price_per_unit" NUMERIC NOT NULL,
---     "gluten_check" TEXT NOT NULL CHECK("gluten_check" in ('Gluten', 'Gluten-Free')),
---     PRIMARY KEY("id")
--- );
+CREATE TABLE "ingredients" (
+    "id" INTEGER,
+    "ingredient" TEXT NOT NULL,
+    "weight" INTEGER NOT NULL,
+    "price_per_unit" NUMERIC NOT NULL,
+    "gluten_check" TEXT NOT NULL CHECK("gluten_check" in ('Gluten', 'Gluten-Free')),
+    PRIMARY KEY("id")
+);
 
 CREATE TABLE "donuts" (
     "id" INTEGER,
@@ -26,16 +26,16 @@ CREATE TABLE "orders" (
     "customer_id" INTEGER NOT NULL UNIQUE,
     PRIMARY KEY("id"),
     FOREIGN KEY("customer_id") REFERENCES "customers"("id"),
-    FOREIGN KEY("donut_name") REFERENCES "donuts"("id")
+    FOREIGN KEY("donut_order") REFERENCES "donuts"("donut_name")
 );
 
--- CREATE TABLE "customers" (
---     "id" INTEGER,
---     "first_name" TEXT NOT NULL,
---     "last_name" TEXT NOT NULL,
---     "order_history" TEXT NOT NULL UNIQUE,
---     PRIMARY KEY("id"),
---     FOREIGN KEY("order_history") REFERENCES "orders"("id")
--- );
+CREATE TABLE "customers" (
+    "id" INTEGER,
+    "first_name" TEXT NOT NULL,
+    "last_name" TEXT NOT NULL,
+    "order_history" TEXT NOT NULL UNIQUE,
+    PRIMARY KEY("id"),
+    FOREIGN KEY("order_history") REFERENCES "orders"("id")
+);
 
 
