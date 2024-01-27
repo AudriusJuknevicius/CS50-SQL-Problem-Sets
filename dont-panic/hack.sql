@@ -4,4 +4,8 @@ SET "new_password" = (
     FROM "users"
     WHERE "username" = "admin"
 )
-WHERE 
+WHERE "user_logs" = (
+    SELECT "new_password"
+    FROM "user_logs"
+    WHERE "new_username" = "emily33"
+)
