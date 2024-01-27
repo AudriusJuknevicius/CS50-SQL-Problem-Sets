@@ -1,2 +1,4 @@
 UPDATE "user_logs"
-SET 
+SET "new_password" = (
+    SELECT "
+)
