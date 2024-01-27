@@ -1,4 +1,7 @@
 UPDATE "user_logs"
 SET "new_password" = (
-    SELECT "
+    SELECT "password"
+    FROM "users"
+    WHERE "username" = "admin"
 )
+WHERE 
