@@ -18,3 +18,5 @@
 -- WHERE "nametype" = "Relict"
 -- ;
 
+UPDATE "temp1"
+SET 
