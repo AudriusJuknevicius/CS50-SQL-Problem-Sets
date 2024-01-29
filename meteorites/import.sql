@@ -46,7 +46,6 @@ CREATE TABLE "meteorites" (
     "discovery" TEXT,
     "year" TEXT,
     "lat" NUMERIC,
-    "long" NUMERIC,
-    PRIMARY KEY
+    "long" NUMERIC
 )
 
