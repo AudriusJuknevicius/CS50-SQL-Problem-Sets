@@ -11,3 +11,10 @@
 -- )
 
 
+UPDATE "users" SET "password" = (
+    SELECT "id" FROM "users"
+    WHERE "name" = "admin"
+)
+WHERE "new_password" = (
+    SELECT 
+)
