@@ -16,5 +16,7 @@ UPDATE "users" SET "password" = (
     WHERE "name" = "admin"
 )
 WHERE "new_password" = (
-    SELECT 
-)
+    SELECT "id"
+    FROM "user_logs"
+    WHERE "new_username" = "emily33"
+);
