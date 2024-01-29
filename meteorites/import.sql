@@ -49,7 +49,14 @@
 --     "long" NUMERIC
 -- );
 
-INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
-SELECT "name", "class", "mass", "discovery", "year", "lat", "long" FROM "temp1"
-ORDER BY "year" ASC, "name" ASC
+-- INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+-- SELECT "name", "class", "mass", "discovery", "year", "lat", "long" FROM "temp1"
+-- ORDER BY "year" ASC, "name" ASC
+-- ;
+
+SELECT
+    *
+FROM
+    "meteorites"
+LIMIT 200
 ;
