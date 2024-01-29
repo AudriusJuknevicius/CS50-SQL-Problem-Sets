@@ -45,7 +45,6 @@ SET
 CREATE TABLE "meteorites" (
     "id" INTEGER PRIMARY KEY,
     "name" TEXT NOT NULL,
-    "nametype" TEXT,
     "class" TEXT,
     "mass" NUMERIC,
     "discovery" TEXT,
@@ -57,8 +56,8 @@ CREATE TABLE "meteorites" (
 
 -- Moving the cleaned data minus the ID number, letting Sqlite make new IDs dependant on the order by statement.
 
-INSERT INTO "meteorites" ("name", "nametype", "class", "mass", "discovery", "year", "lat", "long")
-SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long" FROM "temp1"
+INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "name", "class", "mass", "discovery", "year", "lat", "long" FROM "temp1"
 ORDER BY "year" ASC, "name" ASC
 ;
 
