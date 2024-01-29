@@ -22,13 +22,6 @@ DELETE FROM "temp1"
 WHERE "nametype" = "Relict"
 ;
 
--- Updating the three numeric numbers to be rounded to the nearest hundreth.
-
-UPDATE "temp1"
-SET "mass" = ROUND("mass", 2),
-    "lat" = ROUND("lat", 2),
-    "long" = ROUND("long", 2);
-
 -- Updating zero values to be displayed as "NULL".
 
 UPDATE "temp1"
@@ -38,6 +31,13 @@ SET
 "long" = CASE WHEN "long" = "" THEN "NULL" ELSE "long" END,
 "year" = CASE WHEN "year" = "" THEN "NULL" ELSE "year" END
 ;
+
+-- Updating the three numeric numbers to be rounded to the nearest hundreth.
+
+UPDATE "temp1"
+SET "mass" = ROUND("mass", 2),
+    "lat" = ROUND("lat", 2),
+    "long" = ROUND("long", 2);
 
 
 -- Creating the table with the right data types and constraints.
