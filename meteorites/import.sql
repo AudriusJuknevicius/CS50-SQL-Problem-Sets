@@ -1,6 +1,6 @@
 -- Importing the data into a temporary folder in order to clean it before importing it into a normal table.
 
-.import --csv meteorites.csv temp1
+.import --csv meteorites.csv --skip 1 temp1
 
 
 --  Deleting rows with "relict" meteor nametype.
