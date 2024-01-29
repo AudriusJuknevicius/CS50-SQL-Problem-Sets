@@ -2,6 +2,19 @@
 
 -- .import --csv meteorites.csv temp1
 
+CREATE TABLE "temp1" (
+    "name" TEXT,
+    "id" TEXT,
+    "class" TEXT,
+    "mass" TEXT,
+    "discovery" TEXT,
+    "year" TEXT,
+    "lat" TEXT,
+    "long" TEXT
+);
+
+.import --csv meteorites.csv temp1
+
 
 --  Deleting rows with "relict" meteor nametype.
 
