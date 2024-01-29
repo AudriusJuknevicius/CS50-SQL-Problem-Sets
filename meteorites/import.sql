@@ -19,4 +19,6 @@
 -- ;
 
 UPDATE "temp1"
-SET 
+SET "mass" = ROUND("mass", 2),
+    "lat" = ROUND("lat", 2),
+    "long" = ROUND("long", 2);
