@@ -8,6 +8,7 @@ CREATE TABLE "temp2" (
     "name" TEXT NOT NULL,
     "class" TEXT,
     "mass" NUMERIC,
-    "discovery" 
+    "discovery" TEXT NOT NULL,
+    "year" 
 )
 
