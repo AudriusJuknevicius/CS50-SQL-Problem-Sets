@@ -44,7 +44,7 @@ SET "mass" = ROUND("mass", 2),
 
 CREATE TABLE "meteorites" (
     "id" INTEGER PRIMARY KEY,
-    "name" TEXT NOT NULL,
+    "name" TEXT,
     "class" TEXT,
     "mass" NUMERIC,
     "discovery" TEXT,
