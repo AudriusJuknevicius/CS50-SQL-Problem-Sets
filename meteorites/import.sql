@@ -2,10 +2,10 @@
 
 CREATE TABLE "temp1" (
     "name" TEXT,
-    "id" TEXT,
+    "id" INTEGER,
     "nametype" TEXT,
     "class" TEXT,
-    "mass" TEXT,
+    "mass" REAL,
     "discovery" TEXT,
     "year" TEXT,
     "lat" TEXT,
