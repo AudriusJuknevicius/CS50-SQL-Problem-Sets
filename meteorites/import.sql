@@ -12,7 +12,7 @@ CREATE TABLE "temp1" (
     "long" TEXT
 );
 
-.import --csv meteorites.csv temp1
+.import meteorites.csv temp1
 
 
 --  Deleting rows with "relict" meteor nametype.
