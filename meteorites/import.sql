@@ -29,3 +29,4 @@ SET
 "mass" = CASE WHEN "mass" = 0.0 or 0.00 THEN "NULL" ELSE "mass" END,
 "lat" = CASE WHEN "lat" = 0.0 or 0.00 THEN "NULL" ELSE "lat" END,
 "long" = CASE WHEN "long" = 0.0 or 0.00 THEN "NULL" ELSE "long" END
+;
