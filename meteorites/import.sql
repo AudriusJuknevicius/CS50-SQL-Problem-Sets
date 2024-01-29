@@ -33,9 +33,9 @@ SET "mass" = ROUND("mass", 2),
 
 UPDATE "temp1"
 SET
-"mass" = CASE WHEN "mass" = 0.0 or 0.00 THEN "NULL" ELSE "mass" END,
-"lat" = CASE WHEN "lat" = 0.0 or 0.00 THEN "NULL" ELSE "lat" END,
-"long" = CASE WHEN "long" = 0.0 or 0.00 THEN "NULL" ELSE "long" END,
+"mass" = CASE WHEN "mass" = "" THEN "NULL" ELSE "mass" END,
+"lat" = CASE WHEN "lat" = "" THEN "NULL" ELSE "lat" END,
+"long" = CASE WHEN "long" = "" THEN "NULL" ELSE "long" END,
 "year" = CASE WHEN "year" = "" THEN "NULL" ELSE "year" END
 ;
 
