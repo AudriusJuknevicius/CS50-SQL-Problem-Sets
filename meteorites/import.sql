@@ -39,7 +39,7 @@
 
 
 CREATE TABLE "meteorites" (
-    "id" INTEGER,
+    "id" INTEGER PRIMARY KEY,
     "name" TEXT NOT NULL,
     "class" TEXT,
     "mass" NUMERIC,
@@ -47,5 +47,5 @@ CREATE TABLE "meteorites" (
     "year" TEXT,
     "lat" NUMERIC,
     "long" NUMERIC
-)
+);
 
