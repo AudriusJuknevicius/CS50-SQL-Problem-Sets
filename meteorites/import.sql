@@ -38,14 +38,18 @@
 -- ;
 
 
-CREATE TABLE "meteorites" (
-    "id" INTEGER PRIMARY KEY,
-    "name" TEXT NOT NULL,
-    "class" TEXT,
-    "mass" NUMERIC,
-    "discovery" TEXT,
-    "year" TEXT,
-    "lat" NUMERIC,
-    "long" NUMERIC
-);
+-- CREATE TABLE "meteorites" (
+--     "id" INTEGER PRIMARY KEY,
+--     "name" TEXT NOT NULL,
+--     "class" TEXT,
+--     "mass" NUMERIC,
+--     "discovery" TEXT,
+--     "year" TEXT,
+--     "lat" NUMERIC,
+--     "long" NUMERIC
+-- );
 
+INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "name", "class", "mass", "discovery", "year", "lat", "long" FROM "temp1"
+ORDER BY "year" ASC, "name" ASC
+;
