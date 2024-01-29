@@ -38,7 +38,7 @@
 -- ;
 
 
-CREATE TABLE "temp2" (
+CREATE TABLE "meteorites" (
     "id" INTEGER,
     "name" TEXT NOT NULL,
     "class" TEXT,
