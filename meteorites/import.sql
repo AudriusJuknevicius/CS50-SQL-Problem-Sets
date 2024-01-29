@@ -1,17 +1,31 @@
 -- Importing the data into a temporary folder in order to clean it before importing it into a normal table.
 
+-- CREATE TABLE "temp1" (
+--     "name" TEXT,
+--     "id" INTEGER,
+--     "nametype" TEXT,
+--     "class" TEXT,
+--     "mass" REAL,
+--     "discovery" TEXT,
+--     "year" INTEGER,
+--     "lat" REAL,
+--     "long" REAL,
+--     PRIMARY KEY("id")
+-- );
+
 CREATE TABLE "temp1" (
     "name" TEXT,
     "id" INTEGER,
     "nametype" TEXT,
     "class" TEXT,
-    "mass" REAL,
+    "mass" TEXT,
     "discovery" TEXT,
-    "year" INTEGER,
-    "lat" REAL,
-    "long" REAL,
+    "year" TEXT,
+    "lat" TEXT,
+    "long" TEXT,
     PRIMARY KEY("id")
 );
+
 
 .import --csv --skip 1 meteorites.csv temp1
 
