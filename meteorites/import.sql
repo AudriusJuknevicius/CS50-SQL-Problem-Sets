@@ -1,0 +1,4 @@
+CREATE TEMPORARY TABLE temp1 (
+    id INTEGER PRIMARY KEY,
+    
+)
