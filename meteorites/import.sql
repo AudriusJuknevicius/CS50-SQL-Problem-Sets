@@ -1,7 +1,5 @@
 -- Importing the data into a temporary folder in order to clean it before importing it into a normal table.
 
--- .import --csv meteorites.csv temp1
-
 CREATE TABLE "temp1" (
     "name" TEXT,
     "id" TEXT,
