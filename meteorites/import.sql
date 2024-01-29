@@ -27,7 +27,5 @@
 UPDATE "temp1"
 SET
 "mass" = CASE WHEN "mass" = 0.0 or 0.00 THEN "NULL" ELSE "mass" END,
-"mass" = CASE WHEN "mass" = 0.0 or 0.00 THEN "NULL" ELSE "mass" END,
-"mass" = CASE WHEN "mass" = 0.0 or 0.00 THEN "NULL" ELSE "mass" END,
-"lat" = ROUND("lat", 2),
-"long" = ROUND("long", 2);
+"lat" = CASE WHEN "lat" = 0.0 or 0.00 THEN "NULL" ELSE "lat" END,
+"long" = CASE WHEN "long" = 0.0 or 0.00 THEN "NULL" ELSE "long" END
