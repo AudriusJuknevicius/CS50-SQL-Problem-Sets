@@ -29,7 +29,7 @@ SET
 "mass" = CASE WHEN "mass" = "" OR "mass" = 0 THEN "NULL" ELSE "mass" END,
 "lat" = CASE WHEN "lat" = "" OR "lat" = 0 THEN "NULL" ELSE "lat" END,
 "long" = CASE WHEN "long" = "" OR "long" = 0 THEN "NULL" ELSE "long" END,
-"year" = CASE WHEN "year" = "" THEN "NULL" ELSE "year" END
+"year" = CASE WHEN "year" = "" OR "year" = 0 THEN "NULL" ELSE "year" END
 ;
 
 -- Updating the three numeric numbers to be rounded to the nearest hundreth.
