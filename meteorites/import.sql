@@ -7,9 +7,9 @@ CREATE TABLE "temp1" (
     "class" TEXT,
     "mass" REAL,
     "discovery" TEXT,
-    "year" TEXT,
-    "lat" TEXT,
-    "long" TEXT,
+    "year" INTEGER,
+    "lat" REAL,
+    "long" REAL,
     PRIMARY KEY("id")
 );
 
@@ -26,10 +26,10 @@ WHERE "nametype" = "Relict"
 
 UPDATE "temp1"
 SET
-"mass" = CASE WHEN "mass" = "" OR "mass" = 0 THEN "NULL" ELSE "mass" END,
-"lat" = CASE WHEN "lat" = "" OR "lat" = 0 THEN "NULL" ELSE "lat" END,
-"long" = CASE WHEN "long" = "" OR "long" = 0 THEN "NULL" ELSE "long" END,
-"year" = CASE WHEN "year" = "" OR "year" = 0 THEN "NULL" ELSE "year" END
+"mass" = CASE WHEN "mass" = "" OR "mass" = 0 THEN NULL ELSE "mass" END,
+"lat" = CASE WHEN "lat" = "" OR "lat" = 0 THEN NULL ELSE "lat" END,
+"long" = CASE WHEN "long" = "" OR "long" = 0 THEN NULL ELSE "long" END,
+"year" = CASE WHEN "year" = "" OR "year" = 0 THEN NULL ELSE "year" END
 ;
 
 -- Updating the three numeric numbers to be rounded to the nearest hundreth.
@@ -48,9 +48,9 @@ CREATE TABLE "meteorites" (
     "class" TEXT,
     "mass" NUMERIC,
     "discovery" TEXT,
-    "year" TEXT,
-    "lat" NUMERIC,
-    "long" NUMERIC
+    "year" INTEGER,
+    "lat" REAL,
+    "long" REAL
 );
 
 
