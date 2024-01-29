@@ -26,9 +26,9 @@ WHERE "nametype" = "Relict"
 
 UPDATE "temp1"
 SET
-"mass" = CASE WHEN "mass" = "" THEN "NULL" ELSE "mass" END,
-"lat" = CASE WHEN "lat" = "" THEN "NULL" ELSE "lat" END,
-"long" = CASE WHEN "long" = "" THEN "NULL" ELSE "long" END,
+"mass" = CASE WHEN "mass" = "" OR "mass" = 0 THEN "NULL" ELSE "mass" END,
+"lat" = CASE WHEN "lat" = "" OR "lat" = 0 THEN "NULL" ELSE "lat" END,
+"long" = CASE WHEN "long" = "" OR "long" = 0 THEN "NULL" ELSE "long" END,
 "year" = CASE WHEN "year" = "" THEN "NULL" ELSE "year" END
 ;
 
