@@ -1,9 +1,13 @@
--- CREATE TABLE "temp2" (
---     "id" INTEGER,
---     "name" TEXT NOT NULL,
---     "class"
--- )
+-- .import --csv meteorites.csv temp1
 
 
-CREATE TEMPORARY TABLE "temp" AS
-SELECT 
+
+
+CREATE TABLE "temp2" (
+    "id" INTEGER,
+    "name" TEXT NOT NULL,
+    "class" TEXT,
+    "mass" NUMERIC,
+    "discovery" 
+)
+
