@@ -14,5 +14,7 @@
 
 
 
-UPDATE temp1
-SET 
+-- DELETE FROM "temp1"
+-- WHERE "nametype" = "Relict"
+-- ;
+
