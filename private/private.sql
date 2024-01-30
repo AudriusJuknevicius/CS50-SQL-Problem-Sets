@@ -1,6 +1,6 @@
-CREATE VIEW "message" 
+CREATE VIEW "message" AS
 
-SELECT substr("sentence", 98, 4)
+SELECT substr("sentence", 98, 4) as [phrase]
 FROM "sentences"
 WHERE
     "id" = 14
