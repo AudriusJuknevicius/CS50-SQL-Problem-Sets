@@ -1,4 +1,4 @@
-CREATE VIEW "message" as 
+CREATE VIEW "message" 
 
 SELECT substr("sentence", 98, 4)
 FROM "sentences"
