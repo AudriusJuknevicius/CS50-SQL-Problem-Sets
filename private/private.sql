@@ -1,4 +1,8 @@
 -- CREATE VIEW "first" AS
+
+SELECT
+    *
+FROM(
 SELECT substr("sentence", 98, 4)
 FROM "sentences"
 WHERE
@@ -37,6 +41,5 @@ WHERE
 SELECT substr("sentence", 14, 5)
 FROM "sentences"
 WHERE
-    "id" = 3041
-;
-
+    "id" = 3041;
+)
