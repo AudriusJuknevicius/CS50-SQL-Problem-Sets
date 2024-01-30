@@ -1,4 +1,4 @@
--- CREATE VIEW "first" AS
+CREATE VIEW "message" as 
 
 SELECT substr("sentence", 98, 4)
 FROM "sentences"
