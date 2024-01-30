@@ -8,3 +8,15 @@
 -- male, which is the total number of people identifying as male in the district.
 -- female, which is the total number of people identifying as female in the district.
 
+CREATE VIEW "by_district" AS
+SELECT
+    "district",
+    SUM("families"),
+    SUM("households"),
+    SUM("population"),
+    SUM("male"),
+    SUM("female")
+FROM
+    "census"
+GROUP BY "district"
+;
