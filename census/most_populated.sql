@@ -21,4 +21,5 @@ SELECT
 FROM
     "census"
 GROUP BY "district"
+ORDER BY "population" DESC
 ;
