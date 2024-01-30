@@ -10,18 +10,17 @@
 -- female, which is the total number of people identifying as female in the district.
 
 
--- CREATE VIEW "most_populated" AS
-
+CREATE VIEW "most_populated" AS
 SELECT
     *
 FROM(
 SELECT
     "district",
-    SUM("families"),
-    SUM("households"),
-    SUM("population"),
-    SUM("male"),
-    SUM("female")
+    SUM("families") AS [families],
+    SUM("households") AS [households],
+    SUM("population") AS [population],
+    SUM("male") AS [male],
+    SUM("female") AS [female]
 FROM
     "census"
 GROUP BY "district"
