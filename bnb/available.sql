@@ -1,10 +1,6 @@
 -- https://cs50.harvard.edu/sql/2024/psets/4/bnb/
 
--- CREATE VIEW "available" AS
-SELECT
-    COUNT(*)
-    FROM
-    (
+CREATE VIEW "available" AS
 SELECT
     l.id,
     l.property_type,
@@ -13,5 +9,6 @@ SELECT
 FROM "listings" as l
 JOIN "availabilities" as a ON l.id = a.listing_id
 WHERE
-    a.date = "2023-12-31"
-    );
+    a.available = "TRUE"
+;
+
