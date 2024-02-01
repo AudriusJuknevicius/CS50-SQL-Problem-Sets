@@ -9,6 +9,6 @@ FROM
     "listings" as l
 JOIN "availabilities" as a on l.id = a.listing_id
 WHERE
-    a.available = TRUE and date between "2023-06-01" and "2023-06-30"
+    a.available = "TRUE" and date between "2023-06-01" and "2023-06-30"
 GROUP BY l.id
 ;
