@@ -5,7 +5,7 @@ SELECT
     l.id,
     l.property_type,
     l.host_name,
-    r.reviews
+    r.comments
 FROM "listings" as l
 JOIN "reviews" as r ON l.id = r.listing_id
 ORDER BY r.reviews DESC
