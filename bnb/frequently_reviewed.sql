@@ -9,7 +9,7 @@ SELECT
 FROM "listings" as l
 JOIN "reviews" as r ON l.id = r.listing_id
 GROUP BY r.comments
-ORDER BY r.comments DESC
+ORDER BY r.comments DESC, l.property_type ASC, l.host_name ASC
 LIMIT 100
 ;
 
