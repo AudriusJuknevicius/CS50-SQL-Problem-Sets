@@ -12,4 +12,6 @@ SELECT
     a.date
 FROM "listings" as l
 JOIN "availabilities" as a ON l.id = a.listing_id
+WHERE
+    a.date = "2023-12-31"
     );
