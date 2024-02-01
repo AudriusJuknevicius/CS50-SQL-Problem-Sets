@@ -8,7 +8,7 @@ SELECT
     r.comments
 FROM "listings" as l
 JOIN "reviews" as r ON l.id = r.listing_id
-ORDER BY r.reviews DESC
+ORDER BY r.comments DESC
 LIMIT 100
 ;
 
