@@ -1,5 +1,6 @@
 -- https://cs50.harvard.edu/sql/2024/psets/4/bnb/
 
+CREATE VIEW "june_vacancies" AS
 SELECT
     l.id,
     l.property_type,
