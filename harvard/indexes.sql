@@ -1,7 +1,12 @@
--- CREATE INDEX "primary_students_id" ON "students" ("id");
--- CREATE INDEX "primary_enrollments_id" ON "enrollments" ("id");
--- CREATE INDEX "primary_courses_id" ON "courses" ("id");
--- CREATE INDEX "primary_satisfies_id" ON "satisfies" ("id");
+-- https://cs50.harvard.edu/sql/2024/notes/5/
+
+
+
+
+CREATE INDEX "primary_students_id" ON "students" ("id");
+CREATE INDEX "primary_enrollments_id" ON "enrollments" ("id");
+CREATE INDEX "primary_courses_id" ON "courses" ("id");
+CREATE INDEX "primary_satisfies_id" ON "satisfies" ("id");
 
 
 EXPLAIN QUERY PLAN
