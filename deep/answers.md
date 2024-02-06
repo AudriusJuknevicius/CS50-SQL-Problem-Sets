@@ -63,4 +63,6 @@ The researcher will need to run the query on only some of the boats. -->
 
 Partitioning by hash value is great in this instance as it not only distributes the data evenly but it also
 means that if specific information is required the researchers can run the query on a specific boat.
-This improves performance, efficiency, distribution storage and is great for singular data like this.
+This improves performance and storage efficiency, uniform distribution and is great for singular column data such as this.
+The main drawbacks to this include difficulties in ordering by specific column and although uniform storage is great, each record
+has to be stored in the same capacity or storage size, meaning that the data is not being stored efficienctly or utilizing the space fully.
