@@ -40,10 +40,25 @@ The researcher will need to run the query on only some of the boats. -->
 
 Adopting this approach would help with performance of queries and also make it less complex as less boats have to be used in queries to find results.
 The biggest issue is due to bad partinioning or the inequal division of data, boat A for example will be overwhelmed with data whilst boat B in this
-instance will not be utilized much at all. 
+instance will not be utilized much at all.
 
 
 
 ## Partitioning by Hash Value
 
-TODO
+<!-- **Will the observations likely be evenly distributed across all boats,
+even if AquaByte most commonly collects observations between midnight and 1am? Why or why not?**
+
+The observations will be evenly distributed.
+
+**Suppose a researcher wants to query for all observations between midnight and 1am.
+On how many of the boats will they need to run the query?**
+
+The researcher will likely need to run the query on all of the boats.
+
+**Suppose a researcher wants to query for a specific observation, which occurred at exactly 2023-11-01 00:00:01.020.
+On how many of the boats will they need to run the query?**
+
+The researcher will need to run the query on only some of the boats. -->
+
+
