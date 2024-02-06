@@ -6,7 +6,20 @@ In this problem, you'll write freeform responses to the questions provided in th
 
 ## Random Partitioning
 
-TODO
+<!-- Will the observations likely be evenly distributed across all boats,
+even if AquaByte most commonly collects observations between midnight and 1am? Why or why not? -->
+
+The observations will be evenly distributed.
+
+Looking at Boat A, B and C, it is clear from the date and time that although the data is distributed randomly it follows a pattern
+of A>B>C>A>B>C.
+
+<!-- Suppose a researcher wants to query for all observations between midnight and 1am. On how many of the boats will they need to run the query? -->
+
+The researcher will need to run the query on all of the boats.
+
+As per the previous answer, in order to access all of the data all of the boats included in the random distribution list have to be queried.
+
 
 ## Partitioning by Hour
 
