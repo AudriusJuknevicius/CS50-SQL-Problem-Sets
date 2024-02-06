@@ -61,4 +61,6 @@ On how many of the boats will they need to run the query?**
 
 The researcher will need to run the query on only some of the boats. -->
 
-
+Partitioning by hash value is great in this instance as it not only distributes the data evenly but it also
+means that if specific information is required the researchers can run the query on a specific boat.
+This improves performance, efficiency, distribution storage and is great for singular data like this.
