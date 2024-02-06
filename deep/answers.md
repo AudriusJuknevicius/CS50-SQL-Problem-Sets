@@ -23,9 +23,9 @@ As per the previous answer, in order to access all of the data all of the boats 
 
 The benefits of random partitioning include even load distribution therefore balancing several servers for instance in terms of storage capacity.
 This would also mean that performance of those servers would be similar, promoting equalised indexing and creation of views.
-Some of the biggest issues with such approach is the scalability 
-
-
+Some of the biggest issues with such approach is the scalability and performance once this database gets big. Simply meaning that the bigger it becomes, the bigger
+the performance issues will become ultimately leading towards new servers instead of upgradability and scalability of the pre-existing ones despite potentially
+not reaching the storage thresholds. 
 
 ## Partitioning by Hour
 
