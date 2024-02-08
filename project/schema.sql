@@ -55,6 +55,8 @@ CREATE INDEX "student_name_search" ON "students" ("first_name", "last_name");
 CREATE INDEX "student_github_search" ON "students" ("github_username");
 CREATE INDEX "problem_name_search" ON "problems" ("name");
 
+_______________________________________________________________________________________________
+
 
 CREATE TABLE "users" (
     "id" INTEGER,
