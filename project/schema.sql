@@ -7,6 +7,7 @@ CREATE TABLE "users" (
     "first_name" VARCHAR(24) NOT NULL,
     "last_name" VARCHAR(24) NOT NULL,
     "username" VARCHAR(24) NOT NULL UNIQUE,
+    "display_name" VARCHAR(24) NOT NULL,
     "email" VARCHAR(24) NOT NULL UNIQUE,
     "Password" VARCHAR(24) NOT NULL,
     "registration_date" DATE,
