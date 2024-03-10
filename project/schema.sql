@@ -9,7 +9,7 @@ CREATE TABLE "users" (
     "username" TEXT NOT NULL UNIQUE,
     "email" TEXT NOT NULL UNIQUE,
     "Password" TEXT NOT NULL,
-    
+    "registration_date" 
     PRIMARY KEY("id")
 );
 
