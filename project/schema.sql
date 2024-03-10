@@ -10,19 +10,26 @@ CREATE TABLE "users" (
     PRIMARY KEY("id")
 );
 
--- Represent instructors in the course
-CREATE TABLE "playlists" (
+-- Represent problems in the course
+CREATE TABLE "user_tracks" (
+    "id" INTEGER,
+    "problem_set" INTEGER NOT NULL,
+    "name" TEXT NOT NULL,
+    PRIMARY KEY("id")
+);
+
+CREATE TABLE "tracks" (
     "id" INTEGER,
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
     PRIMARY KEY("id")
 );
 
--- Represent problems in the course
-CREATE TABLE "user_tracks" (
+-- Represent instructors in the course
+CREATE TABLE "playlists" (
     "id" INTEGER,
-    "problem_set" INTEGER NOT NULL,
-    "name" TEXT NOT NULL,
+    "first_name" TEXT NOT NULL,
+    "last_name" TEXT NOT NULL,
     PRIMARY KEY("id")
 );
 
@@ -49,6 +56,7 @@ CREATE TABLE "albums" (
     FOREIGN KEY("submission_id") REFERENCES "submissions"("id")
     FOREIGN KEY("instructor_id") REFERENCES "instructors"("id")
 );
+
 
 -- Create indexes to speed common searches
 CREATE INDEX "student_name_search" ON "students" ("first_name", "last_name");
