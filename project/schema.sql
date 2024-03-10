@@ -1,12 +1,15 @@
 -- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose it
 
 
+-- Represent users in the music database.
 CREATE TABLE "users" (
     "id" INTEGER,
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
-    "github_username" TEXT NOT NULL UNIQUE,
-    "started" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "username" TEXT NOT NULL UNIQUE,
+    "email" TEXT NOT NULL UNIQUE,
+    "Password" TEXT NOT NULL,
+    
     PRIMARY KEY("id")
 );
 
