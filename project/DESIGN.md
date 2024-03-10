@@ -1,6 +1,6 @@
 # Design Document
 
-By YOUR NAME HERE
+By Audrius Juknevicius
 
 Video overview: <URL HERE>
 
