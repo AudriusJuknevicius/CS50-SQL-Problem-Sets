@@ -12,7 +12,7 @@ CREATE TABLE `users` (
     `Password` VARCHAR(24) NOT NULL,
     `registration_date` DATE,
     `date_of_birth` DATE,
-    `profile_image` BLOB,
+    `profile_image` LONGBLOB,
     PRIMARY KEY(`id`)
 );
 
