@@ -19,9 +19,14 @@ CREATE TABLE `users` (
 -- Represent problems in the course
 CREATE TABLE `user_tracks` (
     `user_id` INT,
-    `problem_set` INTEGER NOT NULL,
+    `track_id` INT,
+    `date_added` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `is_favourite` INT DEFAULT 0,
+    `play_count` INT DEFAULT 0,
     `name` TEXT NOT NULL,
-    PRIMARY KEY(`user_id`)
+    PRIMARY KEY(`user_id`, `track_id`),
+    FOREIGN KEY(`user_id`) REFERENCES users(`id`),
+    FOREIGN KEY(`track_id`) REFERENCES tracks(`id`)
 );
 
 CREATE TABLE `tracks` (
