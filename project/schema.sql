@@ -1,7 +1,7 @@
 -- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose it
 
 
--- Represent users in the music database.
+-- `users` Represent users in the music database with their information.
 CREATE TABLE `users` (
     `id` INT AUTO_INCREMENT,
     `first_name` VARCHAR(24) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE `users` (
     PRIMARY KEY(`id`)
 );
 
--- Represent problems in the course
+-- `user_tracks` Represents tracks that a user has, with additional personal information such as play count etc.
 CREATE TABLE `user_tracks` (
     `user_id` INT,
     `track_id` INT,
@@ -25,15 +25,22 @@ CREATE TABLE `user_tracks` (
     `play_count` INT DEFAULT 0,
     `name` TEXT NOT NULL,
     PRIMARY KEY(`user_id`, `track_id`),
-    FOREIGN KEY(`user_id`) REFERENCES users(`id`),
-    FOREIGN KEY(`track_id`) REFERENCES tracks(`id`)
+    FOREIGN KEY(`user_id`) REFERENCES `users`(`id`),
+    FOREIGN KEY(`track_id`) REFERENCES `tracks`(`id`)
 );
 
+-- `tracks` Represents the songs in the database, with further information such as their specific duration.
 CREATE TABLE `tracks` (
-    `id` INTEGER,
-    `first_name` TEXT NOT NULL,
-    `last_name` TEXT NOT NULL,
-    PRIMARY KEY(`id`)
+    `id` INT AUTO_INCREMENT,
+    `artist_name` VARCHAR(34),
+    `title` VARCHAR(34) NOT NULL,
+    `duration` INT NOT NULL,
+    `album_id` INT,
+    `lyrics` TEXT,
+    `release_date`,
+    PRIMARY KEY(`id`),
+    FOREIGN KEY(`album_id`) REFERENCES `albums`(`id`),
+    FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
 -- Represent instructors in the course
