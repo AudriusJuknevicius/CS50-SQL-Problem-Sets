@@ -1,3 +1,3 @@
 -- In this SQL file, write (and comment!) the typical SQL queries users will run on your database
 
-![IMAGE TITLE](FILENAME)
+![Hearify ER Diagram](FILENAME)
