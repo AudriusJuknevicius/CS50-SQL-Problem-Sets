@@ -18,10 +18,10 @@ CREATE TABLE `users` (
 
 -- Represent problems in the course
 CREATE TABLE `user_tracks` (
-    `id` INTEGER,
+    `user_id` INT,
     `problem_set` INTEGER NOT NULL,
     `name` TEXT NOT NULL,
-    PRIMARY KEY(`id`)
+    PRIMARY KEY(`user_id`)
 );
 
 CREATE TABLE `tracks` (
