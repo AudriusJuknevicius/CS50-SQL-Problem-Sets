@@ -1,7 +1,7 @@
 -- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose it
 
 
-CREATE TABLE "USERS" (
+CREATE TABLE "users" (
     "id" INTEGER,
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE "USERS" (
 );
 
 -- Represent instructors in the course
-CREATE TABLE "instructors" (
+CREATE TABLE "playlists" (
     "id" INTEGER,
     "first_name" TEXT NOT NULL,
     "last_name" TEXT NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE "instructors" (
 );
 
 -- Represent problems in the course
-CREATE TABLE "problems" (
+CREATE TABLE "user_tracks" (
     "id" INTEGER,
     "problem_set" INTEGER NOT NULL,
     "name" TEXT NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE "problems" (
 );
 
 -- Represent submissions of problems by students
-CREATE TABLE "submissions" (
+CREATE TABLE "artists" (
     "id" INTEGER,
     "student_id" INTEGER,
     "problem_id" INTEGER,
@@ -40,7 +40,7 @@ CREATE TABLE "submissions" (
 );
 
 -- Represent individual comments left by instructors
-CREATE TABLE "comments" (
+CREATE TABLE "albums" (
     "id" INTEGER,
     "instructor_id" INTEGER,
     "submission_id" INTEGER,
