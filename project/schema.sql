@@ -11,6 +11,8 @@ CREATE TABLE "users" (
     "email" VARCHAR(24) NOT NULL UNIQUE,
     "Password" VARCHAR(24) NOT NULL,
     "registration_date" DATE,
+    "date_of_birth" DATE,
+    "profile_image" BLOB, 
     PRIMARY KEY("id")
 );
 
