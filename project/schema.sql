@@ -3,13 +3,13 @@
 
 -- Represent users in the music database.
 CREATE TABLE "users" (
-    "id" INTEGER,
-    "first_name" TEXT NOT NULL,
-    "last_name" TEXT NOT NULL,
-    "username" TEXT NOT NULL UNIQUE,
-    "email" TEXT NOT NULL UNIQUE,
-    "Password" TEXT NOT NULL,
-    "registration_date" 
+    "id" INT AUTO_INCREMENT,
+    "first_name" VARCHAR(24) NOT NULL,
+    "last_name" VARCHAR(24) NOT NULL,
+    "username" VARCHAR(24) NOT NULL UNIQUE,
+    "email" VARCHAR(24) NOT NULL UNIQUE,
+    "Password" VARCHAR(24) NOT NULL,
+    "registration_date" DATE,
     PRIMARY KEY("id")
 );
 
