@@ -50,33 +50,38 @@ CREATE TABLE `playlists` (
     `playlist_image` MEDIUMBLOB,
     `user_id` INT,
     `description` TEXT,
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `last_updated` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `public_or_private` 
 
     PRIMARY KEY(`playlist_id`)
 );
 
 -- Represent submissions of problems by students
 CREATE TABLE `artists` (
-    `id` INTEGER,
-    `student_id` INTEGER,
-    `problem_id` INTEGER,
-    `submission_path` TEXT NOT NULL,
-    `correctness` NUMERIC NOT NULL CHECK(`correctness` BETWEEN 0 AND 1),
-    `timestamp` NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY(`id`),
-    FOREIGN KEY(`student_id`) REFERENCES `students`(`id`),
-    FOREIGN KEY(`problem_id`) REFERENCES `problems`(`id`)
+
 );
 
 -- Represent individual comments left by instructors
 CREATE TABLE `albums` (
-    `id` INTEGER,
-    `instructor_id` INTEGER,
-    `submission_id` INTEGER,
-    `contents` TEXT NOT NULL,
-    PRIMARY KEY(`id`),
-    FOREIGN KEY(`submission_id`) REFERENCES `submissions`(`id`)
-    FOREIGN KEY(`instructor_id`) REFERENCES `instructors`(`id`)
+
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -- Create indexes to speed common searches
