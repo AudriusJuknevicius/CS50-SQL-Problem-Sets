@@ -86,7 +86,7 @@ CREATE TABLE `albums` (
     `artist_id` INT,
     `album_description` TEXT,
     PRIMARY KEY (`album_id`),
-    FOREIGN KEY (`artist_id`)
+    FOREIGN KEY (`artist_id`) REFERENCES `artists`(`artist_id`)
 
 );
 
