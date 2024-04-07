@@ -62,8 +62,7 @@ CREATE TABLE `playlist_tracks` (
     `playlist_id` INT,
     `track_id` INT,
     `track_order` INT,
-    PRIMARY KEY (`playlist_id, `track_id`)
-    
+    PRIMARY KEY (`playlist_id`, `track_id`)
 );
 
 
