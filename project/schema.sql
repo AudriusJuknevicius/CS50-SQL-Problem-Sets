@@ -46,7 +46,7 @@ CREATE TABLE `tracks` (
 -- `playlists` created by a user.
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
-    `playlist_name` VARCHAR(34),
+    `playlist_name` VARCHAR(34) NOT NULL,
     `playlist_image` MEDIUMBLOB,
     `user_id` INT,
     `description` TEXT,
