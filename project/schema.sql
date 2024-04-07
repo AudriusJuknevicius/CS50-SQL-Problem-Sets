@@ -43,10 +43,11 @@ CREATE TABLE `tracks` (
     FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
--- `playlists` 
+-- `playlists`
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
-    `
+    `playlist_name` VARCHAR(34),
+    
 
     PRIMARY KEY(`playlist_id`)
 );
