@@ -43,7 +43,7 @@ CREATE TABLE `tracks` (
     FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
--- `playlists`
+-- `playlists` created by a user.
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `playlist_name` VARCHAR(34),
@@ -52,9 +52,9 @@ CREATE TABLE `playlists` (
     `description` TEXT,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_updated` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `public_or_private` 
-
-    PRIMARY KEY(`playlist_id`)
+    `public_or_private` ENUM(`public`, `private`) NOT NULL,
+    PRIMARY KEY(`playlist_id`),
+    FOREIGN KEY(`user_id`) REFERENCES `users`(`id`)
 );
 
 -- Represent submissions of problems by students
