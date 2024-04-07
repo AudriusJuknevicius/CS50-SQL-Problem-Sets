@@ -49,7 +49,7 @@ CREATE TABLE `playlists` (
     `playlist_name` VARCHAR(34),
     `playlist_image` MEDIUMBLOB,
     `user_id` INT,
-    `description`
+    `description` TEXT,
 
     PRIMARY KEY(`playlist_id`)
 );
