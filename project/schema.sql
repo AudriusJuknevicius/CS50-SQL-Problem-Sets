@@ -52,7 +52,7 @@ CREATE TABLE `playlists` (
     `playlist_description` TEXT,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_updated` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `public_or_private` ENUM(`public`, `private`) NOT NULL,
+    `public_or_private` ENUM(`public`, `private`) NOT NULL DEFAULT `public`,
     PRIMARY KEY(`playlist_id`),
     FOREIGN KEY(`user_id`) REFERENCES `users`(`id`)
 );
