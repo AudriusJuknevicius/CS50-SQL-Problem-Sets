@@ -43,7 +43,7 @@ CREATE TABLE `tracks` (
     FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
--- Represent instructors in the course
+-- `playlists` table contains tracks grouped by users of their choice.
 CREATE TABLE `playlists` (
     `id` INTEGER,
     `first_name` TEXT NOT NULL,
