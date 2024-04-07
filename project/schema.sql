@@ -45,10 +45,10 @@ CREATE TABLE `tracks` (
 
 -- `playlists` table contains tracks grouped by users of their choice.
 CREATE TABLE `playlists` (
-    `id` INTEGER,
-    `first_name` TEXT NOT NULL,
-    `last_name` TEXT NOT NULL,
-    PRIMARY KEY(`id`)
+    `playlist_id` INT AUTO_INCREMENT,
+    `
+
+    PRIMARY KEY(`playlist_id`)
 );
 
 -- Represent submissions of problems by students
