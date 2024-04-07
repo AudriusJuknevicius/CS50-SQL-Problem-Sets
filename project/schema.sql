@@ -37,7 +37,7 @@ CREATE TABLE `tracks` (
     `duration` INT NOT NULL,
     `album_id` INT,
     `lyrics` TEXT,
-    `release_date`,
+    `release_date` DATE,
     PRIMARY KEY(`id`),
     FOREIGN KEY(`album_id`) REFERENCES `albums`(`id`),
     FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
