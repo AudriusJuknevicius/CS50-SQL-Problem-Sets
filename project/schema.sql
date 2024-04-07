@@ -49,7 +49,7 @@ CREATE TABLE `playlists` (
     `playlist_name` VARCHAR(34) NOT NULL,
     `playlist_image` MEDIUMBLOB,
     `user_id` INT,
-    `description` TEXT,
+    `playlist_description` TEXT,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_updated` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `public_or_private` ENUM(`public`, `private`) NOT NULL,
@@ -79,8 +79,14 @@ CREATE TABLE `artists` (
 -- Albums
 CREATE TABLE `albums` (
     `album_id` INT AUTO_INCREMENT,
-
-
+    `album_title` VARCHAR(32) NOT NULL,
+    `release_date` DATE,
+    `album_cover` MEDIUMBLOB,
+    `album_genre` VARCHAR(32),
+    `artist_id` INT,
+    `album_description` TEXT,
+    PRIMARY KEY (`album_id`),
+    FOREIGN KEY (`artist_id`)
 
 );
 
