@@ -47,6 +47,7 @@ CREATE TABLE `tracks` (
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `playlist_name` VARCHAR(34),
+    `playlist_image` LONGBLOB,
     
 
     PRIMARY KEY(`playlist_id`)
