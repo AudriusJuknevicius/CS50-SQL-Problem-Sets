@@ -43,7 +43,7 @@ CREATE TABLE `tracks` (
     FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
--- `playlists` table contains tracks grouped by users of their choice.
+-- `playlists` 
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `
