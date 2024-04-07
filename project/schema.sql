@@ -68,7 +68,7 @@ CREATE TABLE `playlist_tracks` (
 
 -- Represent submissions of problems by students
 CREATE TABLE `artists` (
-
+    
 
 );
 
