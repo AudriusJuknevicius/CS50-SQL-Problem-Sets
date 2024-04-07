@@ -4,12 +4,12 @@
 -- `users` Represent users in the music database with their information.
 CREATE TABLE `users` (
     `id` INT AUTO_INCREMENT,
-    `first_name` VARCHAR(24) NOT NULL,
-    `last_name` VARCHAR(24) NOT NULL,
-    `username` VARCHAR(24) NOT NULL UNIQUE,
-    `display_name` VARCHAR(24) NOT NULL,
-    `email` VARCHAR(24) NOT NULL UNIQUE,
-    `Password` VARCHAR(24) NOT NULL,
+    `first_name` VARCHAR(32) NOT NULL,
+    `last_name` VARCHAR(32) NOT NULL,
+    `username` VARCHAR(32) NOT NULL UNIQUE,
+    `display_name` VARCHAR(32) NOT NULL,
+    `email` VARCHAR(32) NOT NULL UNIQUE,
+    `Password` VARCHAR(32) NOT NULL,
     `registration_date` DATE,
     `date_of_birth` DATE,
     `profile_image` MEDIUMBLOB,
@@ -32,8 +32,8 @@ CREATE TABLE `user_tracks` (
 -- `tracks` Represents the songs in the database, with further information such as their specific duration.
 CREATE TABLE `tracks` (
     `id` INT AUTO_INCREMENT,
-    `artist_name` VARCHAR(34),
-    `title` VARCHAR(34) NOT NULL,
+    `artist_name` VARCHAR(32),
+    `title` VARCHAR(32) NOT NULL,
     `duration` INT NOT NULL,
     `album_id` INT,
     `lyrics` TEXT,
@@ -46,7 +46,7 @@ CREATE TABLE `tracks` (
 -- `playlists` created by a user.
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
-    `playlist_name` VARCHAR(34) NOT NULL,
+    `playlist_name` VARCHAR(32) NOT NULL,
     `playlist_image` MEDIUMBLOB,
     `user_id` INT,
     `playlist_description` TEXT,
