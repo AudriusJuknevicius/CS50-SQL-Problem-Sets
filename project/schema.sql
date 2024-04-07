@@ -12,7 +12,7 @@ CREATE TABLE `users` (
     `Password` VARCHAR(24) NOT NULL,
     `registration_date` DATE,
     `date_of_birth` DATE,
-    `profile_image` LONGBLOB,
+    `profile_image` MEDIUMBLOB,
     PRIMARY KEY(`id`)
 );
 
@@ -47,9 +47,9 @@ CREATE TABLE `tracks` (
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `playlist_name` VARCHAR(34),
-    `playlist_image` LONGBLOB,
+    `playlist_image` MEDIUMBLOB,
     `user_id` INT,
-    `description` 
+    `description`
 
     PRIMARY KEY(`playlist_id`)
 );
