@@ -66,14 +66,21 @@ CREATE TABLE `playlist_tracks` (
 );
 
 
--- Represent submissions of problems by students
+-- Artists
 CREATE TABLE `artists` (
-    
+    `artist_id` INT AUTO_INCREMENT,
+    `artist_name` VARCHAR(32) NOT NULL,
+    `artist_picture` MEDIUMBLOB,
+    `biography` TEXT,
+    PRIMARY KEY (`artist_id`)
 
 );
 
--- Represent individual comments left by instructors
+-- Albums
 CREATE TABLE `albums` (
+    `album_id` INT AUTO_INCREMENT,
+
+
 
 );
 
