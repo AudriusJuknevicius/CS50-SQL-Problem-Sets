@@ -48,7 +48,8 @@ CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `playlist_name` VARCHAR(34),
     `playlist_image` LONGBLOB,
-    
+    `user_id` INT,
+    `description` 
 
     PRIMARY KEY(`playlist_id`)
 );
