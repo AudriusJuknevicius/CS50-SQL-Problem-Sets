@@ -57,9 +57,19 @@ CREATE TABLE `playlists` (
     FOREIGN KEY(`user_id`) REFERENCES `users`(`id`)
 );
 
+-- playlist tracks
+CREATE TABLE `playlist_tracks` (
+    `playlist_id` INT,
+    `track_id` INT,
+    
+
+
+);
+
+
 -- Represent submissions of problems by students
 CREATE TABLE `artists` (
-    
+
 
 );
 
