@@ -32,6 +32,7 @@ CREATE TABLE `user_tracks` (
 -- `tracks` Represents the songs in the database, with further information such as their specific duration.
 CREATE TABLE `tracks` (
     `id` INT AUTO_INCREMENT,
+    `artist_id` INT,
     `artist_name` VARCHAR(32),
     `title` VARCHAR(32) NOT NULL,
     `duration` INT NOT NULL,
@@ -40,7 +41,7 @@ CREATE TABLE `tracks` (
     `release_date` DATE,
     PRIMARY KEY(`id`),
     FOREIGN KEY(`album_id`) REFERENCES `albums`(`id`),
-    FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
+    FOREIGN KEY(`artist_id`) REFERENCES `artists`(`artist_id`)
 );
 
 -- `playlists` created by a user.
