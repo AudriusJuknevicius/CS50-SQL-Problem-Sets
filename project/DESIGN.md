@@ -32,7 +32,7 @@ In this section you should answer the following questions:
 
 ### Relationships
 
-![Hearify ER Diagram](.png)
+![Diagram](.jpg)
 
 In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
 
