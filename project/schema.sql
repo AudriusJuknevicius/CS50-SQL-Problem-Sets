@@ -95,7 +95,7 @@ CREATE TABLE `albums` (
 
 
 
--- Create indexes to speed common searches
+-- Database index to speed up queries and searches.
 CREATE INDEX `username_search` ON `users` (`username`);
 CREATE INDEX `song_title_search` ON `tracks` (`title`);
 CREATE INDEX `artist_title_search` ON `artists` (`artist_name`);
