@@ -9,7 +9,7 @@ CREATE TABLE `users` (
     `username` VARCHAR(32) NOT NULL UNIQUE,
     `display_name` VARCHAR(32) NOT NULL,
     `email` VARCHAR(32) NOT NULL UNIQUE,
-    `Password` VARCHAR(32) NOT NULL,
+    `password` VARCHAR(32) NOT NULL,
     `registration_date` DATE,
     `date_of_birth` DATE,
     `profile_image` MEDIUMBLOB,
