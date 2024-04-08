@@ -96,7 +96,7 @@ CREATE TABLE `albums` (
 
 -- Create indexes to speed common searches
 CREATE INDEX `username_search` ON `users` (`username`);
-CREATE INDEX `student_github_search` ON `students` (`github_username`);
+CREATE INDEX `song_title_search` ON `tracks` (`title`);
 CREATE INDEX `problem_name_search` ON `problems` (`name`);
 
 _______________________________________________________________________________________________
