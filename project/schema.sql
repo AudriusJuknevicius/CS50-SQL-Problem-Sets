@@ -109,6 +109,20 @@ CREATE INDEX `artist_title_search` ON `artists` (`artist_name`);
 CREATE INDEX `album_title_search` ON `albums` (`album_title`);
 
 
+-- A view to find the top 10 played tracks of all time.
+CREATE VIEW `top10_tracks` AS
+SELECT
+    t.id,
+    t.artist_name,
+    t.title,
+    t.duration,
+    SUM(u.play_count) AS times_listened
+FROM `tracks` AS t
+JOIN `user_tracks` AS u ON t.id = u.track_id
+GROUP BY t.id, t.artist_name, t.title, t.duration
+ORDER BY times_listened DESC
+LIMIT 10
+;
 
 
 
