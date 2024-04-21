@@ -44,7 +44,7 @@ CREATE TABLE `tracks` (
     FOREIGN KEY(`artist_id`) REFERENCES `artists`(`artist_id`)
 );
 
--- Represents tracks grouped together by user's preferences.
+-- Represents individual playlists created by the user.
 CREATE TABLE `playlists` (
     `playlist_id` INT AUTO_INCREMENT,
     `playlist_name` VARCHAR(32) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE `playlists` (
     FOREIGN KEY(`user_id`) REFERENCES `users`(`id`)
 );
 
--- Shows 
+-- Represents tracks grouped together by user's preferences.
 CREATE TABLE `playlist_tracks` (
     `playlist_id` INT,
     `track_id` INT,
@@ -69,7 +69,7 @@ CREATE TABLE `playlist_tracks` (
 );
 
 
--- Artists
+-- Represents artists and their profiles.
 CREATE TABLE `artists` (
     `artist_id` INT AUTO_INCREMENT,
     `artist_name` VARCHAR(32) NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE `artists` (
 
 );
 
--- Albums
+-- Shows an album which is a collection of songs produced by an artist.
 CREATE TABLE `albums` (
     `album_id` INT AUTO_INCREMENT,
     `album_title` VARCHAR(32) NOT NULL,
