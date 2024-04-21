@@ -1,6 +1,11 @@
 -- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose it
 
 
+-- Hearify Schema
+
+-- Below are the tables, index and view statements that are responsible for the hearify schema.
+
+
 -- `users` Represent users in the music database with their information.
 CREATE TABLE `users` (
     `id` INT AUTO_INCREMENT,
