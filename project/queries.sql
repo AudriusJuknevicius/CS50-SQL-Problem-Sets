@@ -25,4 +25,8 @@ ORDER BY total_tracks_added DESC
 LIMIT 5
 ;
 
+-- Find top 10 tracks that have been added to the most playlists, also includes number of playlists each track is in and total play count
+-- across all of the playlists. Added a minimum requirement of a track being in 5 playlists.
 
+SELECT
+    t.id AS t
