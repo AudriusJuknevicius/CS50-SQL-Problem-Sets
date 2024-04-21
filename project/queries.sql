@@ -29,4 +29,15 @@ LIMIT 5
 -- across all of the playlists. Added a minimum requirement of a track being in 5 playlists.
 
 SELECT
-    t.id AS t
+    t.id AS track_id,
+    t.title,
+    COUNT(pt.playlist_id) AS playlists_count,
+    SUM(ut.play_count) AS total_play_count
+FROM tracks AS t
+JOIN playlist_tracks AS pt ON t.id = ot.track_id
+JOIN user_tracks AS ut ON t.id = ut.track_id
+GROUP BY t.id, t.title
+HAVING playlist_count >= 5
+ORDER BY total_play_count DESC
+LIMIT 10
+;
