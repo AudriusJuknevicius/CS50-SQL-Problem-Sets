@@ -368,15 +368,103 @@ In this section you should answer the following questions:
 
 In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
 
+#### 1. Users:
+    -Each user can own multiple user tracks and create multiple playlists.
+    Both of these are one-to-many relationships.
+
+#### 2. User Tracks:
+    -Each user track belongs to one user.
+    Many-to-one relationship.
+
+#### 3. Tracks:
+    -Each track can be included in multiple user tracks.
+    One-to-many relationship.
+
+    -Each track belongs to one album.
+    -Each track belongs to one artist.
+    Both of these are many-to-one relationships.
+
+    -Each track can be included in multiple playlists.
+    Many to many relationship.
+
+
+#### 4. Playlists:
+    -Each playlist belongs to one user.
+    Many-to-one relationship.
+
+    -Each playlist can contain multiple tracks.
+    Many-to-many relationship.
+
+
+#### 5. Playlist Tracks:
+    -Each playlist track corresponds to one playlist.
+    -Each playlist track corresponds to one track.
+    Both are many-to-one relationships.
+
+#### 6. Artists:
+    -Each artist can produce multiple albums.
+    -Each artist's name is associated with multiple tracks.
+    Both are one-to-many relationships.
+
+#### 7. Albums:
+    -Each album belongs to one artist.
+    Many-to-one relationship.
+
+    -Each album can contain multiple tracks.
+    One-to-many relationship.
+
+
 ## Optimizations
 
 In this section you should answer the following questions:
 
 * Which optimizations (e.g., indexes, views) did you create? Why?
 
+#### Indexes:
+    -Created four indexes in total. In a normal music database such as hearify majority of users will be searching for tracks, to do so they will use track titles, artist names and also album names.
+    Therefore all three of those have been indexed.
+    Lastly, nobody wants to wait long before they can login therefore username index was also created
+    So everyone could login as quickly as possible which also alleviates pressure from the server running more queries. In a way the quicker one can be logged in the quicker the query can be accomplished freeing up valuable server capacity to uphold other commands and queries.
+
+#### Views:
+    -Created a singular view of top 10 tracks. Just like popular top 40 songs and other various leaderboards by which some users tend to listen to various tracks, this is an example. It could easily be duplicated and edited to include many similar views including artists and which is the newest most listened to album.
+
+#### Additional Optimization:
+    -Created "playlist_tracks" as a sub-table as the playlist table itself had a lot of fields already.
+    This sub-table acts as the storage for the actual tracks contained in the playlist and should optimize the server performance.
+
+
 ## Limitations
 
 In this section you should answer the following questions:
 
 * What are the limitations of your design?
+
+#### 1. Limited Data Integrity:
+    The schema is functional with foreign keys between the tables, it lacks further constraints
+    Like check or triggers to make sure more complex rulesets are followed resulting in a much higher data integrity.
+
+#### 2. Limited Flexibility:
+    The current schema lacks flexibility and more customization. There is no way for users to communicate between one another, and currently there is no way to favourite a playlist from another user.
+    In addition, there is no table for favourite tracks or playlists which could be made.
+
+#### 3. Complexity and growth:
+    I tried to not make too many tables or too few but even after settling on the seven that have been made I have to admit that more tables with the data being spread out much more would be better.
+    Currently the tables have many attributes which may mean if there are too many queries due to complexity and resource-intensity the server may become very slow affecting other users.
+    This could present a real challenge to the growth of Hearify.
+
+#### 4. Security:
+    Storing the password in the users table is not the greatest implementation and could easily be exploited.
+    It should be hashed and secured safely with additional triggers added to prevent a data breach.
+
+
 * What might your database not be able to represent very well?
+
+#### 1. Additional metrics:
+    The schema does not include extra tables or triggers to capture additional information which could help with trend analysis and other streaming analytics that could be used to present more personalised track offers to users, this also includes geographical data.
+
+#### 2. Dynamics:
+    Whilst the schema has artists and albums, with the current of one to many relationship it is impossible to represent a track or an album that was worked on by two artists. This would also be applicable to bands for example.
+
+#### 3. Transactions:
+    As mentioned previously, the current schema is not designed or has any support integrated for transactions and or purchases of tracks. This is usually done by another database but it could house simple information captured in a table by a trigger of when a user purchases a track, for how much and then could also include the country, region or city for extra information.
