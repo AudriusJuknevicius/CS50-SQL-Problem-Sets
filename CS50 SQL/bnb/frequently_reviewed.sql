@@ -17,14 +17,15 @@ LIMIT 100
 
 CREATE VIEW `top10_tracks` AS
 SELECT
-    t.id
+    t.id,
     t.artist_name,
     t.title,
-    SUM(u.play_count) AS `listened`
+    t.duration,
+    SUM(u.play_count) AS times_listened
 FROM `tracks` AS t
 JOIN `user_tracks` AS u ON t.id = u.track_id
-GROUP BY t.id
-ORDER BY t.artist_name ASC, t.title ASC
+GROUP BY t.id, t.artist_name, t.title, t.duration
+ORDER BY times_listened DESC
 LIMIT 10
 ;
 
