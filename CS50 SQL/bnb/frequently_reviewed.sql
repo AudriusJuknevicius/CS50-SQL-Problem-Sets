@@ -15,9 +15,10 @@ LIMIT 100
 
 
 
-CREATE VIEW `top10_tracks_month` AS
+CREATE VIEW `top10_tracks` AS
 SELECT
     t.artist_name,
     t.title,
-    SUM(u.play_count) as `listened`
-FROM `
+    SUM(u.play_count) AS `listened`
+FROM `tracks` AS t
+JOIN `user_tracks` AS u ON 
