@@ -16,7 +16,7 @@ CREATE TABLE `users` (
     `display_name` VARCHAR(32) NOT NULL,
     `email` VARCHAR(32) NOT NULL UNIQUE,
     `password` VARCHAR(32) NOT NULL,
-    `registration_date` DATE,
+    `registration_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `date_of_birth` DATE,
     `profile_image` MEDIUMBLOB,
     PRIMARY KEY(`id`)
