@@ -108,5 +108,7 @@ CREATE INDEX `song_title_search` ON `tracks` (`title`);
 CREATE INDEX `artist_title_search` ON `artists` (`artist_name`);
 CREATE INDEX `album_title_search` ON `albums` (`album_title`);
 
+
+
 _______________________________________________________________________________________________
 
