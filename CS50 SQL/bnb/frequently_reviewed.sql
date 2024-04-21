@@ -13,3 +13,8 @@ ORDER BY reviews DESC, l.property_type ASC, l.host_name ASC
 LIMIT 100
 ;
 
+
+
+CREATE VIEW `top10_tracks_month` AS
+SELECT
+    
