@@ -25,6 +25,7 @@ ORDER BY total_tracks_added DESC
 LIMIT 5
 ;
 
+
 -- Find top 10 tracks that have been added to the most playlists, also includes number of playlists each track is in and total play count
 -- across all of the playlists. Added a minimum requirement of a track being in 5 playlists.
 
@@ -34,10 +35,11 @@ SELECT
     COUNT(pt.playlist_id) AS playlists_count,
     SUM(ut.play_count) AS total_play_count
 FROM tracks AS t
-JOIN playlist_tracks AS pt ON t.id = ot.track_id
+JOIN playlist_tracks AS pt ON t.id = pt.track_id
 JOIN user_tracks AS ut ON t.id = ut.track_id
 GROUP BY t.id, t.title
-HAVING playlist_count >= 5
+HAVING playlists_count >= 5
 ORDER BY total_play_count DESC
 LIMIT 10
 ;
+
