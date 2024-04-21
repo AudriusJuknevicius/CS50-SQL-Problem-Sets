@@ -8,5 +8,6 @@ SELECT
 FROM playlists as p
 JOIN playlist_tracks as pt ON p.playlist_id = pt.playlist_id
 GROUP BY p.playlist_id, p.playlist_name
+ORDER BY total_tracks DESC
 ;
 
