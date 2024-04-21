@@ -9,7 +9,17 @@ Video overview: <URL HERE>
 In this section you should answer the following questions:
 
 * What is the purpose of your database?
+
+The database is there to make Hearify(Spotify clone) application function as intended.
+With the neccessary functional fields in place, it is a functioning database.
+
 * Which people, places, things, etc. are you including in the scope of your database?
+
+Users, the main customer and intended audience for the application. Includes basic information
+such as name, surname and email address. Has additional function to have personalised profile image.
+
+
+
 * Which people, places, things, etc. are *outside* the scope of your database?
 
 ## Functional Requirements
