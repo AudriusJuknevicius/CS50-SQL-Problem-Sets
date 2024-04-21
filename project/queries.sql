@@ -43,7 +43,7 @@ ORDER BY total_play_count DESC
 LIMIT 10
 ;
 
--- Register a new user
+-- Register a new user.
 
 INSERT INTO users (first_name, last_name, username, display_name, email, password, date_of_birth)
 VALUES ('Audrius', 'Juknevicius', 'ajmusic01', 'AJ<3Hearify','ajhearify@gmail.com','ilovemusic123', NULL);
