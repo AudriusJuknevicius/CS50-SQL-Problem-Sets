@@ -6,7 +6,7 @@ SELECT
     p.playlist_name,
     COUNT(pt.track_id) AS total_tracks
 FROM playlists as p
-JOIN playlist_tracks as pt ON p.playlist_id = pt.playlist.id
+JOIN playlist_tracks as pt ON p.playlist_id = pt.playlist_id
 GROUP BY p.playlist_id, p.playlist_name
 ;
 
