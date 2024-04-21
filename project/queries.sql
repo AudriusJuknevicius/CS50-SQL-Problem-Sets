@@ -43,3 +43,6 @@ ORDER BY total_play_count DESC
 LIMIT 10
 ;
 
+-- Register new user
+
+
