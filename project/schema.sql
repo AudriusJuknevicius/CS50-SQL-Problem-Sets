@@ -33,7 +33,6 @@ CREATE TABLE `user_tracks` (
     PRIMARY KEY(`user_id`, `track_id`),
     FOREIGN KEY(`user_id`) REFERENCES `users`(`id`),
     FOREIGN KEY(`track_id`) REFERENCES `tracks`(`id`),
-    FOREIGN KEY(`track_title`) REFERENCES `tracks`(`title`)
 );
 
 -- Represents the songs in the database, with further information such as their specific duration.
