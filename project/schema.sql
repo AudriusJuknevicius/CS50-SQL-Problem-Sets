@@ -49,6 +49,7 @@ CREATE TABLE `tracks` (
     PRIMARY KEY(`id`),
     FOREIGN KEY(`album_id`) REFERENCES `albums`(`id`),
     FOREIGN KEY(`artist_id`) REFERENCES `artists`(`artist_id`)
+    FOREIGN KEY(`artist_name`) REFERENCES `artists`(`artist_name`)
 );
 
 -- Represents individual playlists created by the user.
