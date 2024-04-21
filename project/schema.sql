@@ -14,7 +14,7 @@ CREATE TABLE `users` (
     `last_name` VARCHAR(32) NOT NULL,
     `username` VARCHAR(32) NOT NULL UNIQUE,
     `display_name` VARCHAR(32) NOT NULL,
-    `email` VARCHAR(32) NOT NULL UNIQUE,
+    `email` VARCHAR(64) NOT NULL UNIQUE,
     `password` VARCHAR(32) NOT NULL,
     `registration_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `date_of_birth` DATE,
