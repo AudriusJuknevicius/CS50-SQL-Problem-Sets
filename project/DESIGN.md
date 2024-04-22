@@ -364,7 +364,8 @@ In this section you should answer the following questions:
 
 ### Relationships
 
-![Diagram](.jpg)
+![Diagram](diagram.jpg)
+
 
 In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
 
